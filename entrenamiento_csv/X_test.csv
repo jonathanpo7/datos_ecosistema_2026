@@ -1,0 +1,530 @@
+lag4,lag3,lag2,lag1,semestre,CARACTER,ORIGEN,DEPARTAMENTO,MUNICIPIO
+4.29,3.76,3.03,4.58,1,Universidad,Oficial,bogota d c,bogota dc
+3.76,3.03,4.58,6.05,2,Universidad,Oficial,bogota d c,bogota dc
+7.42,7.23,6.19,11.07,1,Universidad,Oficial,antioquia,medellin
+7.23,6.19,11.07,12.69,2,Universidad,Oficial,antioquia,medellin
+6.41,5.91,4.42,7.59,1,Universidad,Oficial,caldas,manizales
+5.91,4.42,7.59,8.37,2,Universidad,Oficial,caldas,manizales
+5.84,7.43,4.93,7.67,1,Universidad,Oficial,valle del cauca,palmira
+7.43,4.93,7.67,7.44,2,Universidad,Oficial,valle del cauca,palmira
+6.24,7.72,5.92,6.2,1,Universidad,Oficial,bogota d c,bogota dc
+7.72,5.92,6.2,7.25,2,Universidad,Oficial,bogota d c,bogota dc
+5.69,5.14,6.89,4.96,1,Universidad,Oficial,boyaca,tunja
+5.14,6.89,4.96,6.07,2,Universidad,Oficial,boyaca,tunja
+5.03,4.92,5.17,4.28,1,Universidad,Oficial,boyaca,duitama
+4.92,5.17,4.28,4.35,2,Universidad,Oficial,boyaca,duitama
+3.29,3.69,6.23,4.32,1,Universidad,Oficial,boyaca,sogamoso
+3.69,6.23,4.32,3.03,2,Universidad,Oficial,boyaca,sogamoso
+21.03,9.03,10.91,7.23,1,Universidad,Oficial,boyaca,chiquinquira
+9.03,10.91,7.23,4.91,2,Universidad,Oficial,boyaca,chiquinquira
+11.66,10.93,5.48,6.73,1,Universidad,Oficial,caldas,manizales
+10.93,5.48,6.73,4.92,2,Universidad,Oficial,caldas,manizales
+5.0,4.45,3.85,3.96,1,Universidad,Oficial,cordoba,monteria
+4.45,3.85,3.96,3.63,2,Universidad,Oficial,cordoba,monteria
+7.28,7.83,7.77,5.85,1,Universidad,Oficial,huila,neiva
+7.83,7.77,5.85,8.73,2,Universidad,Oficial,huila,neiva
+8.26,7.23,6.95,7.68,1,Universidad,Oficial,caqueta,florencia
+7.23,6.95,7.68,8.39,2,Universidad,Oficial,caqueta,florencia
+6.92,7.22,9.19,9.24,1,Universidad,Oficial,bogota d c,bogota dc
+7.22,9.19,9.24,10.88,2,Universidad,Oficial,bogota d c,bogota dc
+4.23,12.21,5.59,6.18,1,Universidad,Oficial,choco,quibdo
+12.21,5.59,6.18,10.52,2,Universidad,Oficial,choco,quibdo
+9.0,8.54,10.59,7.15,1,Universidad,Oficial,cesar,valledupar
+8.54,10.59,7.15,8.68,2,Universidad,Oficial,cesar,valledupar
+3.53,5.76,5.79,6.12,1,Universidad,Oficial,bogota d c,bogota dc
+5.76,5.79,6.12,6.56,2,Universidad,Oficial,bogota d c,bogota dc
+21.41,11.6,7.7,7.07,1,Universidad,Oficial,valle del cauca,buenaventura
+11.6,7.7,7.07,10.07,2,Universidad,Oficial,valle del cauca,buenaventura
+9.22,10.05,9.39,7.61,1,Universidad,Oficial,cesar,aguachica
+10.05,9.39,7.61,13.21,2,Universidad,Oficial,cesar,aguachica
+9.73,12.62,9.64,4.95,1,Universidad,Oficial,antioquia,medellin
+12.62,9.64,4.95,12.67,2,Universidad,Oficial,antioquia,medellin
+11.76,3.72,11.57,8.0,1,Universidad,Oficial,atlantico,puerto colombia
+3.72,11.57,8.0,9.98,2,Universidad,Oficial,atlantico,puerto colombia
+4.95,7.93,6.18,6.13,1,Universidad,Oficial,valle del cauca,cali
+7.93,6.18,6.13,7.89,2,Universidad,Oficial,valle del cauca,cali
+4.29,5.39,6.39,6.52,1,Universidad,Oficial,santander,bucaramanga
+5.39,6.39,6.52,7.92,2,Universidad,Oficial,santander,bucaramanga
+5.92,3.01,7.69,7.17,1,Universidad,Oficial,bolivar,cartagena de indias
+3.01,7.69,7.17,9.6,2,Universidad,Oficial,bolivar,cartagena de indias
+5.82,6.77,5.2,5.39,1,Universidad,Oficial,narino,pasto
+6.77,5.2,5.39,5.73,2,Universidad,Oficial,narino,pasto
+10.95,13.11,11.48,7.02,1,Universidad,Oficial,tolima,ibague
+13.11,11.48,7.02,8.66,2,Universidad,Oficial,tolima,ibague
+6.58,8.26,9.76,8.73,1,Universidad,Oficial,quindio,armenia
+8.26,9.76,8.73,10.25,2,Universidad,Oficial,quindio,armenia
+3.34,6.37,8.06,5.79,1,Universidad,Oficial,norte de santander,cucuta
+6.37,8.06,5.79,8.34,2,Universidad,Oficial,norte de santander,cucuta
+3.22,4.87,5.27,4.91,1,Universidad,Oficial,norte de santander,ocana
+4.87,5.27,4.91,5.53,2,Universidad,Oficial,norte de santander,ocana
+4.48,7.21,4.51,5.06,1,Universidad,Oficial,norte de santander,pamplona
+7.21,4.51,5.06,7.35,2,Universidad,Oficial,norte de santander,pamplona
+4.89,4.34,3.46,7.46,1,Universidad,Oficial,magdalena,santa marta
+4.34,3.46,7.46,6.35,2,Universidad,Oficial,magdalena,santa marta
+5.83,7.38,6.66,6.18,1,Universidad,Oficial,cundinamarca,fusagasuga
+7.38,6.66,6.18,7.99,2,Universidad,Oficial,cundinamarca,fusagasuga
+4.47,8.37,4.86,4.35,1,Universidad,Oficial,cundinamarca,girardot
+8.37,4.86,4.35,6.09,2,Universidad,Oficial,cundinamarca,girardot
+7.04,6.3,8.1,6.46,1,Universidad,Oficial,cundinamarca,villa de san diego de ubate
+6.3,8.1,6.46,8.16,2,Universidad,Oficial,cundinamarca,villa de san diego de ubate
+10.95,12.84,8.31,3.18,1,Universidad,Oficial,antioquia,el carmen de viboral
+12.84,8.31,3.18,10.42,2,Universidad,Oficial,antioquia,el carmen de viboral
+5.78,4.44,7.12,3.95,1,Universidad,Oficial,antioquia,turbo
+4.44,7.12,3.95,6.75,2,Universidad,Oficial,antioquia,turbo
+11.39,3.24,1.34,16.78,1,Universidad,Oficial,bogota d c,bogota dc
+3.24,1.34,16.78,20.23,2,Universidad,Oficial,bogota d c,bogota dc
+3.97,3.95,4.36,4.46,1,Universidad,No oficial,bogota d c,bogota dc
+3.95,4.36,4.46,4.72,2,Universidad,No oficial,bogota d c,bogota dc
+4.82,5.31,4.73,4.07,1,Universidad,No oficial,valle del cauca,cali
+5.31,4.73,4.07,6.0,2,Universidad,No oficial,valle del cauca,cali
+24.55,24.9,20.51,19.63,1,Universidad,No oficial,bogota d c,bogota dc
+24.9,20.51,19.63,20.85,2,Universidad,No oficial,bogota d c,bogota dc
+10.26,9.28,11.34,11.5,1,Universidad,No oficial,bogota d c,bogota dc
+9.28,11.34,11.5,14.21,2,Universidad,No oficial,bogota d c,bogota dc
+10.94,14.45,7.53,10.63,1,Universidad,No oficial,santander,bucaramanga
+14.45,7.53,10.63,9.51,2,Universidad,No oficial,santander,bucaramanga
+7.05,8.78,6.46,8.87,1,Universidad,No oficial,bogota d c,bogota dc
+8.78,6.46,8.87,7.11,2,Universidad,No oficial,bogota d c,bogota dc
+6.95,7.41,5.86,6.78,1,Universidad,No oficial,bogota d c,bogota dc
+7.41,5.86,6.78,6.61,2,Universidad,No oficial,bogota d c,bogota dc
+7.03,7.17,7.26,7.4,1,Universidad,No oficial,bogota d c,bogota dc
+7.17,7.26,7.4,9.03,2,Universidad,No oficial,bogota d c,bogota dc
+6.42,12.68,7.65,7.22,1,Universidad,No oficial,antioquia,medellin
+12.68,7.65,7.22,7.86,2,Universidad,No oficial,antioquia,medellin
+1.66,3.26,2.65,3.54,1,Universidad,No oficial,cundinamarca,chia
+3.26,2.65,3.54,3.42,2,Universidad,No oficial,cundinamarca,chia
+4.33,3.33,5.63,3.81,1,Universidad,No oficial,antioquia,medellin
+3.33,5.63,3.81,5.58,2,Universidad,No oficial,antioquia,medellin
+2.72,3.51,3.9,3.72,1,Universidad,No oficial,atlantico,barranquilla
+3.51,3.9,3.72,4.5,2,Universidad,No oficial,atlantico,barranquilla
+3.61,4.64,4.33,4.38,1,Universidad,No oficial,bogota d c,bogota dc
+4.64,4.33,4.38,7.67,2,Universidad,No oficial,bogota d c,bogota dc
+6.31,7.47,6.5,6.31,1,Universidad,No oficial,bogota d c,bogota dc
+7.47,6.5,6.31,9.06,2,Universidad,No oficial,bogota d c,bogota dc
+6.09,5.36,5.89,5.47,1,Universidad,No oficial,valle del cauca,cali
+5.36,5.89,5.47,5.42,2,Universidad,No oficial,valle del cauca,cali
+10.62,9.62,10.94,11.62,1,Universidad,No oficial,antioquia,medellin
+9.62,10.94,11.62,11.24,2,Universidad,No oficial,antioquia,medellin
+7.93,8.1,8.49,8.32,1,Universidad,No oficial,bogota d c,bogota dc
+8.1,8.49,8.32,8.43,2,Universidad,No oficial,bogota d c,bogota dc
+9.68,10.35,9.2,11.23,1,Universidad,No oficial,bogota d c,bogota dc
+10.35,9.2,11.23,11.75,2,Universidad,No oficial,bogota d c,bogota dc
+7.52,5.42,6.44,3.9,1,Universidad,No oficial,narino,pasto
+5.42,6.44,3.9,5.83,2,Universidad,No oficial,narino,pasto
+6.38,10.01,6.74,9.41,1,Universidad,No oficial,caldas,manizales
+10.01,6.74,9.41,8.89,2,Universidad,No oficial,caldas,manizales
+7.75,9.11,6.96,7.64,1,Universidad,No oficial,santander,bucaramanga
+9.11,6.96,7.64,8.35,2,Universidad,No oficial,santander,bucaramanga
+4.57,3.22,5.28,6.7,1,Universidad,No oficial,bolivar,cartagena de indias
+3.22,5.28,6.7,6.82,2,Universidad,No oficial,bolivar,cartagena de indias
+24.12,27.32,29.92,42.35,1,Universidad,No oficial,bogota d c,bogota dc
+9.06,8.38,9.12,9.47,1,Universidad,No oficial,antioquia,rionegro
+8.38,9.12,9.47,11.18,2,Universidad,No oficial,antioquia,rionegro
+3.34,4.6,3.8,4.0,1,Universidad,No oficial,cordoba,monteria
+4.6,3.8,4.0,5.32,2,Universidad,No oficial,cordoba,monteria
+7.53,7.76,8.91,12.38,1,Universidad,No oficial,bogota d c,bogota dc
+7.76,8.91,12.38,10.9,2,Universidad,No oficial,bogota d c,bogota dc
+6.36,7.29,8.37,7.48,1,Universidad,No oficial,bogota d c,bogota dc
+7.29,8.37,7.48,8.88,2,Universidad,No oficial,bogota d c,bogota dc
+3.1,7.0,3.44,3.79,1,Universidad,No oficial,valle del cauca,palmira
+7.0,3.44,3.79,7.24,2,Universidad,No oficial,valle del cauca,palmira
+6.12,7.04,5.38,10.25,1,Universidad,No oficial,boyaca,tunja
+7.04,5.38,10.25,8.64,2,Universidad,No oficial,boyaca,tunja
+10.16,8.1,7.67,8.64,1,Universidad,No oficial,magdalena,santa marta
+8.1,7.67,8.64,10.28,2,Universidad,No oficial,magdalena,santa marta
+6.05,5.73,7.13,6.55,1,Universidad,No oficial,boyaca,tunja
+5.73,7.13,6.55,9.21,2,Universidad,No oficial,boyaca,tunja
+8.42,10.21,8.67,9.87,1,Universidad,No oficial,bogota d c,bogota dc
+10.21,8.67,9.87,14.92,2,Universidad,No oficial,bogota d c,bogota dc
+10.51,13.11,12.09,15.43,1,Universidad,No oficial,bogota d c,bogota dc
+13.11,12.09,15.43,13.64,2,Universidad,No oficial,bogota d c,bogota dc
+13.42,11.16,7.38,11.06,1,Universidad,No oficial,quindio,armenia
+11.16,7.38,11.06,12.31,2,Universidad,No oficial,quindio,armenia
+8.8,9.61,8.55,8.62,1,Universidad,No oficial,bogota d c,bogota dc
+9.61,8.55,8.62,10.31,2,Universidad,No oficial,bogota d c,bogota dc
+11.06,9.85,11.88,11.19,1,Universidad,No oficial,atlantico,barranquilla
+9.85,11.88,11.19,14.4,2,Universidad,No oficial,atlantico,barranquilla
+5.85,6.44,6.46,6.59,1,Universidad,No oficial,valle del cauca,cali
+6.44,6.46,6.59,8.32,2,Universidad,No oficial,valle del cauca,cali
+7.89,12.28,7.92,12.74,1,Universidad,No oficial,bogota d c,bogota dc
+12.28,7.92,12.74,9.35,2,Universidad,No oficial,bogota d c,bogota dc
+7.41,7.46,7.56,7.59,1,Universidad,No oficial,valle del cauca,cali
+7.46,7.56,7.59,7.31,2,Universidad,No oficial,valle del cauca,cali
+4.7,8.4,5.28,8.7,1,Universidad,No oficial,atlantico,barranquilla
+8.4,5.28,8.7,6.31,2,Universidad,No oficial,atlantico,barranquilla
+6.68,10.61,6.76,11.42,1,Universidad,No oficial,risaralda,pereira
+10.61,6.76,11.42,8.99,2,Universidad,No oficial,risaralda,pereira
+10.13,13.26,8.64,13.01,1,Universidad,No oficial,norte de santander,cucuta
+13.26,8.64,13.01,11.02,2,Universidad,No oficial,norte de santander,cucuta
+9.23,19.24,5.46,14.25,1,Universidad,No oficial,santander,socorro
+19.24,5.46,14.25,6.63,2,Universidad,No oficial,santander,socorro
+8.59,8.6,9.31,8.94,1,Universidad,No oficial,antioquia,medellin
+8.6,9.31,8.94,10.71,2,Universidad,No oficial,antioquia,medellin
+3.14,3.44,2.97,3.18,1,Universidad,No oficial,bogota d c,bogota dc
+3.44,2.97,3.18,2.64,2,Universidad,No oficial,bogota d c,bogota dc
+10.29,10.66,12.54,10.0,1,Universidad,No oficial,antioquia,medellin
+10.66,12.54,10.0,13.31,2,Universidad,No oficial,antioquia,medellin
+9.78,7.39,7.05,7.14,1,Universidad,No oficial,bogota d c,bogota dc
+7.39,7.05,7.14,10.38,2,Universidad,No oficial,bogota d c,bogota dc
+8.53,9.29,7.1,7.96,1,Universidad,No oficial,antioquia,medellin
+9.29,7.1,7.96,9.07,2,Universidad,No oficial,antioquia,medellin
+7.61,7.96,7.96,6.43,1,Universidad,No oficial,santander,bucaramanga
+7.96,7.96,6.43,8.41,2,Universidad,No oficial,santander,bucaramanga
+9.33,10.39,9.41,9.27,1,Universidad,No oficial,bogota d c,bogota dc
+10.39,9.41,9.27,9.92,2,Universidad,No oficial,bogota d c,bogota dc
+20.08,18.2,9.46,11.03,1,Universidad,No oficial,santander,barrancabermeja
+18.2,9.46,11.03,11.14,2,Universidad,No oficial,santander,barrancabermeja
+6.0,4.9,5.38,7.63,1,Universidad,No oficial,magdalena,santa marta
+4.9,5.38,7.63,8.54,2,Universidad,No oficial,magdalena,santa marta
+7.25,10.53,8.52,8.71,1,Universidad,No oficial,cundinamarca,girardot
+10.53,8.52,8.71,10.77,2,Universidad,No oficial,cundinamarca,girardot
+9.28,9.39,8.71,9.36,1,Universidad,No oficial,santander,bucaramanga
+9.39,8.71,9.36,11.17,2,Universidad,No oficial,santander,bucaramanga
+1.47,1.66,1.81,2.68,1,Universidad,No oficial,atlantico,barranquilla
+1.66,1.81,2.68,2.67,2,Universidad,No oficial,atlantico,barranquilla
+8.27,10.44,8.98,9.11,1,Universidad,No oficial,caldas,manizales
+10.44,8.98,9.11,11.6,2,Universidad,No oficial,caldas,manizales
+6.83,6.74,7.43,6.86,1,Universidad,No oficial,bogota d c,bogota dc
+6.74,7.43,6.86,7.1,2,Universidad,No oficial,bogota d c,bogota dc
+5.79,10.11,4.7,7.11,1,Universidad,No oficial,caldas,manizales
+10.11,4.7,7.11,4.57,2,Universidad,No oficial,caldas,manizales
+3.16,2.41,2.98,3.28,1,Universidad,No oficial,valle del cauca,cali
+2.41,2.98,3.28,3.09,2,Universidad,No oficial,valle del cauca,cali
+8.87,5.75,5.17,4.89,1,Universidad,No oficial,valle del cauca,palmira
+5.75,5.17,4.89,6.0,2,Universidad,No oficial,valle del cauca,palmira
+9.78,7.48,8.47,8.62,1,Universidad,No oficial,valle del cauca,cali
+7.48,8.47,8.62,10.59,2,Universidad,No oficial,valle del cauca,cali
+7.9,8.26,7.14,8.81,1,Universidad,No oficial,tolima,ibague
+8.26,7.14,8.81,8.72,2,Universidad,No oficial,tolima,ibague
+6.11,5.52,4.66,5.54,1,Universidad,No oficial,bolivar,cartagena de indias
+5.52,4.66,5.54,7.19,2,Universidad,No oficial,bolivar,cartagena de indias
+6.72,6.09,5.49,5.13,1,Universidad,No oficial,cordoba,monteria
+6.09,5.49,5.13,7.43,2,Universidad,No oficial,cordoba,monteria
+5.26,6.23,5.68,6.5,1,Universidad,No oficial,bolivar,cartagena de indias
+6.23,5.68,6.5,8.49,2,Universidad,No oficial,bolivar,cartagena de indias
+6.85,5.51,5.68,5.31,1,Universidad,No oficial,bogota d c,bogota dc
+5.51,5.68,5.31,4.74,2,Universidad,No oficial,bogota d c,bogota dc
+8.26,9.98,12.26,10.37,1,Universidad,Oficial,bogota d c,bogota dc
+9.98,12.26,10.37,15.44,2,Universidad,Oficial,bogota d c,bogota dc
+15.45,17.28,11.79,14.74,1,Institución universitaria/Escuela Tecnológica,Oficial,bogota d c,bogota dc
+17.28,11.79,14.74,13.1,2,Institución universitaria/Escuela Tecnológica,Oficial,bogota d c,bogota dc
+11.45,12.62,11.26,11.74,1,Institución universitaria/Escuela Tecnológica,Oficial,antioquia,medellin
+12.62,11.26,11.74,12.85,2,Institución universitaria/Escuela Tecnológica,Oficial,antioquia,medellin
+4.32,4.97,3.72,5.62,1,Institución universitaria/Escuela Tecnológica,Oficial,valle del cauca,cali
+4.97,3.72,5.62,6.08,2,Institución universitaria/Escuela Tecnológica,Oficial,valle del cauca,cali
+9.22,7.63,8.16,8.51,1,Institución universitaria/Escuela Tecnológica,Oficial,valle del cauca,cali
+7.63,8.16,8.51,9.32,2,Institución universitaria/Escuela Tecnológica,Oficial,valle del cauca,cali
+10.69,12.81,9.13,10.6,1,Institución universitaria/Escuela Tecnológica,Oficial,santander,barrancabermeja
+12.81,9.13,10.6,12.21,2,Institución universitaria/Escuela Tecnológica,Oficial,santander,barrancabermeja
+5.79,9.36,5.56,6.21,1,Institución universitaria/Escuela Tecnológica,Oficial,tolima,ibague
+9.36,5.56,6.21,8.63,2,Institución universitaria/Escuela Tecnológica,Oficial,tolima,ibague
+12.56,10.04,8.88,11.08,1,Institución universitaria/Escuela Tecnológica,Oficial,antioquia,medellin
+10.04,8.88,11.08,13.94,2,Institución universitaria/Escuela Tecnológica,Oficial,antioquia,medellin
+10.7,9.36,8.97,7.95,1,Institución universitaria/Escuela Tecnológica,Oficial,bolivar,cartagena de indias
+9.36,8.97,7.95,11.62,2,Institución universitaria/Escuela Tecnológica,Oficial,bolivar,cartagena de indias
+5.1,7.15,6.46,5.23,1,Institución universitaria/Escuela Tecnológica,Oficial,valle del cauca,tulua
+7.15,6.46,5.23,6.39,2,Institución universitaria/Escuela Tecnológica,Oficial,valle del cauca,tulua
+7.54,9.19,10.52,9.84,1,Institución universitaria/Escuela Tecnológica,Oficial,antioquia,envigado
+9.19,10.52,9.84,9.78,2,Institución universitaria/Escuela Tecnológica,Oficial,antioquia,envigado
+4.74,5.15,6.44,6.3,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+5.15,6.44,6.3,11.48,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+1.92,3.11,3.51,4.07,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+3.11,3.51,4.07,4.43,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+3.7,2.64,2.69,4.49,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+2.64,2.69,4.49,3.59,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+1.65,1.31,1.88,2.11,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+1.31,1.88,2.11,2.57,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+3.02,4.34,5.95,5.84,1,Universidad,No oficial,antioquia,medellin
+4.34,5.95,5.84,5.88,2,Universidad,No oficial,antioquia,medellin
+3.85,4.36,3.87,4.64,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+4.36,3.87,4.64,6.42,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+10.69,11.51,7.44,8.72,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+11.51,7.44,8.72,9.18,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+8.21,8.76,8.11,7.57,1,Universidad,No oficial,risaralda,pereira
+8.76,8.11,7.57,8.42,2,Universidad,No oficial,risaralda,pereira
+6.49,6.03,5.23,6.18,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+6.03,5.23,6.18,6.84,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+10.34,10.11,10.56,9.98,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+10.11,10.56,9.98,12.58,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+8.12,8.34,9.74,9.18,1,Institución universitaria/Escuela Tecnológica,No oficial,cauca,popayan
+8.34,9.74,9.18,10.65,2,Institución universitaria/Escuela Tecnológica,No oficial,cauca,popayan
+6.43,7.07,7.11,7.67,1,Universidad,No oficial,antioquia,medellin
+7.07,7.11,7.67,7.86,2,Universidad,No oficial,antioquia,medellin
+6.62,7.33,7.74,7.77,1,Institución universitaria/Escuela Tecnológica,No oficial,boyaca,tunja
+7.33,7.74,7.77,9.76,2,Institución universitaria/Escuela Tecnológica,No oficial,boyaca,tunja
+6.56,7.32,8.82,9.2,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+7.32,8.82,9.2,12.59,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+14.48,12.17,11.17,11.74,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+12.17,11.17,11.74,10.41,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+9.16,9.16,11.25,11.63,1,Institución universitaria/Escuela Tecnológica,No oficial,santander,san gil
+9.16,11.25,11.63,13.88,2,Institución universitaria/Escuela Tecnológica,No oficial,santander,san gil
+12.26,11.18,11.78,13.46,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+11.18,11.78,13.46,16.9,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+11.16,14.49,14.04,18.88,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,sabaneta
+14.49,14.04,18.88,17.75,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,sabaneta
+19.52,16.06,16.75,16.96,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+16.06,16.75,16.96,22.08,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+3.5,3.15,4.35,3.73,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+3.15,4.35,3.73,4.2,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+9.67,13.34,11.16,16.71,1,Institución universitaria/Escuela Tecnológica,No oficial,valle del cauca,cali
+13.34,11.16,16.71,18.63,2,Institución universitaria/Escuela Tecnológica,No oficial,valle del cauca,cali
+11.63,15.67,11.69,12.42,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+15.67,11.69,12.42,18.97,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+5.14,12.15,9.77,12.5,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+12.15,9.77,12.5,9.21,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+11.69,7.73,8.87,9.14,1,Institución universitaria/Escuela Tecnológica,No oficial,risaralda,pereira
+7.73,8.87,9.14,11.03,2,Institución universitaria/Escuela Tecnológica,No oficial,risaralda,pereira
+12.66,14.74,13.92,11.97,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+14.74,13.92,11.97,8.16,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+16.55,22.82,35.97,0.0,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,apartado
+22.82,35.97,0.0,100.0,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,apartado
+16.18,17.46,14.41,9.76,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+17.46,14.41,9.76,8.57,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+9.02,7.57,9.25,5.7,1,Institución universitaria/Escuela Tecnológica,No oficial,tolima,espinal
+7.57,9.25,5.7,7.94,2,Institución universitaria/Escuela Tecnológica,No oficial,tolima,espinal
+8.34,4.52,5.0,7.44,1,Universidad,Oficial,casanare,yopal
+4.52,5.0,7.44,9.89,2,Universidad,Oficial,casanare,yopal
+7.88,8.23,6.85,6.38,1,Institución tecnológica,No oficial,narino,pasto
+8.23,6.85,6.38,8.05,2,Institución tecnológica,No oficial,narino,pasto
+8.84,9.35,11.79,12.81,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+9.35,11.79,12.81,18.32,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+4.55,5.43,5.81,3.68,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+5.43,5.81,3.68,5.42,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+17.05,11.51,16.38,15.29,1,Institución universitaria/Escuela Tecnológica,No oficial,valle del cauca,cali
+11.51,16.38,15.29,15.05,2,Institución universitaria/Escuela Tecnológica,No oficial,valle del cauca,cali
+13.34,14.52,16.04,16.63,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+14.52,16.04,16.63,17.74,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+4.31,4.05,4.89,5.32,1,Universidad,No oficial,atlantico,barranquilla
+4.05,4.89,5.32,6.55,2,Universidad,No oficial,atlantico,barranquilla
+7.56,7.88,6.51,6.96,1,Universidad,No oficial,atlantico,barranquilla
+7.88,6.51,6.96,17.42,2,Universidad,No oficial,atlantico,barranquilla
+4.78,6.17,7.72,6.28,1,Universidad,No oficial,bogota d c,bogota dc
+6.17,7.72,6.28,7.16,2,Universidad,No oficial,bogota d c,bogota dc
+7.73,6.19,11.21,15.07,1,Universidad,No oficial,bogota d c,bogota dc
+6.19,11.21,15.07,12.39,2,Universidad,No oficial,bogota d c,bogota dc
+5.97,7.16,7.1,5.14,1,Universidad,No oficial,antioquia,envigado
+7.16,7.1,5.14,3.84,2,Universidad,No oficial,antioquia,envigado
+6.4,8.4,7.94,8.41,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+8.4,7.94,8.41,11.17,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+13.03,10.93,9.82,8.31,1,Institución universitaria/Escuela Tecnológica,No oficial,risaralda,santa rosa de cabal
+10.93,9.82,8.31,13.8,2,Institución universitaria/Escuela Tecnológica,No oficial,risaralda,santa rosa de cabal
+7.63,7.62,10.66,10.19,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,caldas
+7.62,10.66,10.19,11.62,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,caldas
+11.4,9.54,10.01,12.0,1,Institución universitaria/Escuela Tecnológica,No oficial,sucre,sincelejo
+9.54,10.01,12.0,13.3,2,Institución universitaria/Escuela Tecnológica,No oficial,sucre,sincelejo
+4.91,5.66,4.14,5.16,1,Institución universitaria/Escuela Tecnológica,No oficial,bolivar,cartagena de indias
+5.66,4.14,5.16,5.73,2,Institución universitaria/Escuela Tecnológica,No oficial,bolivar,cartagena de indias
+14.17,13.8,14.41,13.96,1,Institución universitaria/Escuela Tecnológica,No oficial,meta,villavicencio
+13.8,14.41,13.96,20.22,2,Institución universitaria/Escuela Tecnológica,No oficial,meta,villavicencio
+9.91,11.53,8.95,9.53,1,Institución universitaria/Escuela Tecnológica,No oficial,huila,neiva
+11.53,8.95,9.53,13.52,2,Institución universitaria/Escuela Tecnológica,No oficial,huila,neiva
+9.72,9.22,10.29,10.01,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+9.22,10.29,10.01,15.84,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+11.85,10.92,16.24,15.4,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+10.92,16.24,15.4,26.99,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+14.65,16.35,17.51,19.61,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+16.35,17.51,19.61,22.22,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+5.57,7.0,5.75,6.12,1,Universidad,No oficial,santander,bucaramanga
+7.0,5.75,6.12,6.33,2,Universidad,No oficial,santander,bucaramanga
+10.98,9.45,11.24,11.39,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+9.45,11.24,11.39,13.33,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+11.67,11.31,12.41,12.68,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+11.31,12.41,12.68,16.58,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+16.3,20.49,24.42,6.87,1,Institución universitaria/Escuela Tecnológica,No oficial,atlantico,barranquilla
+20.49,24.42,6.87,10.27,2,Institución universitaria/Escuela Tecnológica,No oficial,atlantico,barranquilla
+12.13,13.63,15.41,17.06,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+13.63,15.41,17.06,18.54,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+7.25,4.49,7.39,4.13,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+4.49,7.39,4.13,6.49,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+4.64,4.76,4.13,7.04,1,Institución universitaria/Escuela Tecnológica,No oficial,quindio,armenia
+4.76,4.13,7.04,5.66,2,Institución universitaria/Escuela Tecnológica,No oficial,quindio,armenia
+10.12,9.88,7.65,10.51,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,bello
+9.88,7.65,10.51,10.05,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,bello
+7.05,7.16,7.22,8.47,1,Institución universitaria/Escuela Tecnológica,No oficial,atlantico,barranquilla
+7.16,7.22,8.47,10.24,2,Institución universitaria/Escuela Tecnológica,No oficial,atlantico,barranquilla
+8.46,9.99,9.77,10.7,1,Universidad,No oficial,santander,bucaramanga
+9.99,9.77,10.7,14.81,2,Universidad,No oficial,santander,bucaramanga
+10.54,10.57,12.7,11.52,1,Institución universitaria/Escuela Tecnológica,No oficial,cauca,popayan
+10.57,12.7,11.52,14.55,2,Institución universitaria/Escuela Tecnológica,No oficial,cauca,popayan
+13.32,9.31,10.74,11.35,1,Institución universitaria/Escuela Tecnológica,No oficial,sucre,sincelejo
+9.31,10.74,11.35,14.79,2,Institución universitaria/Escuela Tecnológica,No oficial,sucre,sincelejo
+16.24,26.47,14.74,21.21,1,Institución universitaria/Escuela Tecnológica,Oficial,bogota d c,bogota dc
+26.47,14.74,21.21,32.61,2,Institución universitaria/Escuela Tecnológica,Oficial,bogota d c,bogota dc
+1.7,81.25,99.33,8.0,1,Institución universitaria/Escuela Tecnológica,Oficial,bogota d c,bogota dc
+81.25,99.33,8.0,12.07,2,Institución universitaria/Escuela Tecnológica,Oficial,bogota d c,bogota dc
+4.01,8.17,12.2,6.82,1,Institución universitaria/Escuela Tecnológica,Oficial,bolivar,cartagena de indias
+8.17,12.2,6.82,10.03,2,Institución universitaria/Escuela Tecnológica,Oficial,bolivar,cartagena de indias
+4.31,7.52,7.35,5.8,1,Institución universitaria/Escuela Tecnológica,Oficial,cauca,popayan
+7.52,7.35,5.8,6.41,2,Institución universitaria/Escuela Tecnológica,Oficial,cauca,popayan
+18.2,13.9,13.34,12.16,1,Institución universitaria/Escuela Tecnológica,Oficial,antioquia,medellin
+13.9,13.34,12.16,20.63,2,Institución universitaria/Escuela Tecnológica,Oficial,antioquia,medellin
+92.21,27.77,0.57,5.45,1,Institución tecnológica,Oficial,atlantico,barranquilla
+27.77,0.57,5.45,15.66,2,Institución tecnológica,Oficial,atlantico,barranquilla
+11.87,13.97,15.33,16.65,1,Institución universitaria/Escuela Tecnológica,Oficial,putumayo,mocoa
+13.97,15.33,16.65,23.01,2,Institución universitaria/Escuela Tecnológica,Oficial,putumayo,mocoa
+12.62,9.42,11.79,6.7,1,Institución universitaria/Escuela Tecnológica,Oficial,atlantico,barranquilla
+9.42,11.79,6.7,15.43,2,Institución universitaria/Escuela Tecnológica,Oficial,atlantico,barranquilla
+8.66,13.0,14.66,15.41,1,Institución tecnológica,Oficial,santander,bucaramanga
+13.0,14.66,15.41,18.87,2,Institución tecnológica,Oficial,santander,bucaramanga
+7.85,13.23,8.36,7.43,1,Institución universitaria/Escuela Tecnológica,Oficial,antioquia,medellin
+13.23,8.36,7.43,9.12,2,Institución universitaria/Escuela Tecnológica,Oficial,antioquia,medellin
+5.28,7.83,6.06,5.82,1,Institución universitaria/Escuela Tecnológica,Oficial,valle del cauca,cali
+7.83,6.06,5.82,6.18,2,Institución universitaria/Escuela Tecnológica,Oficial,valle del cauca,cali
+13.03,12.23,14.29,14.44,1,Institución universitaria/Escuela Tecnológica,Oficial,antioquia,medellin
+12.23,14.29,14.44,20.2,2,Institución universitaria/Escuela Tecnológica,Oficial,antioquia,medellin
+7.49,14.21,9.0,12.92,1,Institución tecnológica,Oficial,antioquia,envigado
+14.21,9.0,12.92,21.62,2,Institución tecnológica,Oficial,antioquia,envigado
+9.07,10.49,17.28,10.57,1,Institución tecnológica,No oficial,bogota d c,bogota dc
+10.49,17.28,10.57,10.24,2,Institución tecnológica,No oficial,bogota d c,bogota dc
+10.01,10.59,13.25,11.84,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+10.59,13.25,11.84,12.78,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+8.34,7.74,6.61,7.76,1,Institución universitaria/Escuela Tecnológica,No oficial,bolivar,cartagena de indias
+7.74,6.61,7.76,11.62,2,Institución universitaria/Escuela Tecnológica,No oficial,bolivar,cartagena de indias
+13.94,15.51,16.2,14.16,1,Institución tecnológica,No oficial,valle del cauca,cali
+15.51,16.2,14.16,16.3,2,Institución tecnológica,No oficial,valle del cauca,cali
+17.64,13.08,14.39,17.68,1,Institución universitaria/Escuela Tecnológica,No oficial,bolivar,cartagena de indias
+13.08,14.39,17.68,22.5,2,Institución universitaria/Escuela Tecnológica,No oficial,bolivar,cartagena de indias
+10.96,10.88,11.07,13.43,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+10.88,11.07,13.43,15.6,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+23.2,21.29,7.86,32.53,1,Institución tecnológica,No oficial,santander,bucaramanga
+21.29,7.86,32.53,39.48,2,Institución tecnológica,No oficial,santander,bucaramanga
+9.56,7.87,10.47,12.44,1,Institución tecnológica,No oficial,norte de santander,cucuta
+7.87,10.47,12.44,19.92,2,Institución tecnológica,No oficial,norte de santander,cucuta
+16.77,16.89,11.49,13.74,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+16.89,11.49,13.74,20.32,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+12.12,10.02,10.12,11.44,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+10.02,10.12,11.44,13.84,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+23.33,15.53,20.1,13.71,1,Institución tecnológica,No oficial,bogota d c,bogota dc
+15.53,20.1,13.71,17.2,2,Institución tecnológica,No oficial,bogota d c,bogota dc
+13.33,11.42,11.11,12.16,1,Institución tecnológica,No oficial,valle del cauca,cartago
+11.42,11.11,12.16,16.11,2,Institución tecnológica,No oficial,valle del cauca,cartago
+9.75,16.93,12.09,10.63,1,Institución universitaria/Escuela Tecnológica,No oficial,valle del cauca,cali
+16.93,12.09,10.63,15.16,2,Institución universitaria/Escuela Tecnológica,No oficial,valle del cauca,cali
+19.78,18.34,11.17,7.65,1,Institución tecnológica,No oficial,valle del cauca,cali
+18.34,11.17,7.65,19.87,2,Institución tecnológica,No oficial,valle del cauca,cali
+15.89,10.32,11.33,9.88,1,Institución tecnológica,No oficial,bogota d c,bogota dc
+10.32,11.33,9.88,15.22,2,Institución tecnológica,No oficial,bogota d c,bogota dc
+15.15,20.73,14.29,19.51,1,Institución tecnológica,No oficial,cundinamarca,fusagasuga
+20.73,14.29,19.51,21.28,2,Institución tecnológica,No oficial,cundinamarca,fusagasuga
+17.81,11.07,17.72,15.32,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,bello
+11.07,17.72,15.32,21.66,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,bello
+12.02,12.85,12.41,13.16,1,Institución universitaria/Escuela Tecnológica,No oficial,narino,pasto
+12.85,12.41,13.16,15.09,2,Institución universitaria/Escuela Tecnológica,No oficial,narino,pasto
+15.12,14.77,14.41,13.59,1,Institución tecnológica,No oficial,bogota d c,bogota dc
+14.77,14.41,13.59,29.53,2,Institución tecnológica,No oficial,bogota d c,bogota dc
+11.29,12.42,26.38,21.71,1,Institución tecnológica,No oficial,antioquia,medellin
+12.42,26.38,21.71,22.76,2,Institución tecnológica,No oficial,antioquia,medellin
+8.05,7.82,6.85,8.64,1,Institución universitaria/Escuela Tecnológica,No oficial,atlantico,barranquilla
+7.82,6.85,8.64,11.82,2,Institución universitaria/Escuela Tecnológica,No oficial,atlantico,barranquilla
+15.39,32.31,20.47,15.85,1,Institución tecnológica,No oficial,bogota d c,bogota dc
+32.31,20.47,15.85,18.97,2,Institución tecnológica,No oficial,bogota d c,bogota dc
+9.95,10.53,8.74,9.18,1,Institución universitaria/Escuela Tecnológica,No oficial,cauca,popayan
+10.53,8.74,9.18,9.1,2,Institución universitaria/Escuela Tecnológica,No oficial,cauca,popayan
+1.37,8.33,5.86,6.01,1,Institución tecnológica,Oficial,sucre,covenas
+8.33,5.86,6.01,10.34,2,Institución tecnológica,Oficial,sucre,covenas
+2.88,2.89,4.32,2.36,1,Institución tecnológica,Oficial,cundinamarca,nilo
+2.89,4.32,2.36,5.03,2,Institución tecnológica,Oficial,cundinamarca,nilo
+15.92,11.52,13.63,8.14,1,Institución técnica profesional,Oficial,valle del cauca,roldanillo
+11.52,13.63,8.14,20.67,2,Institución técnica profesional,Oficial,valle del cauca,roldanillo
+23.47,37.73,28.21,30.72,1,Institución técnica profesional,Oficial,la guajira,san juan del cesar
+37.73,28.21,30.72,31.19,2,Institución técnica profesional,Oficial,la guajira,san juan del cesar
+83.49,62.24,43.18,29.64,1,Institución técnica profesional,Oficial,archipielago de san andres y providencia,san andres
+62.24,43.18,29.64,19.65,2,Institución técnica profesional,Oficial,archipielago de san andres y providencia,san andres
+23.77,14.3,12.71,15.5,1,Institución técnica profesional,Oficial,valle del cauca,guadalajara de buga
+14.3,12.71,15.5,32.12,2,Institución técnica profesional,Oficial,valle del cauca,guadalajara de buga
+9.02,11.2,10.02,9.7,1,Institución universitaria/Escuela Tecnológica,Oficial,bogota d c,bogota dc
+11.2,10.02,9.7,12.92,2,Institución universitaria/Escuela Tecnológica,Oficial,bogota d c,bogota dc
+10.63,37.36,23.33,19.38,1,Institución técnica profesional,Oficial,valle del cauca,cali
+37.36,23.33,19.38,26.62,2,Institución técnica profesional,Oficial,valle del cauca,cali
+10.6,10.02,8.22,7.17,1,Institución técnica profesional,Oficial,tolima,espinal
+10.02,8.22,7.17,14.71,2,Institución técnica profesional,Oficial,tolima,espinal
+12.08,20.95,11.71,9.06,1,Institución universitaria/Escuela Tecnológica,Oficial,magdalena,cienaga
+20.95,11.71,9.06,24.05,2,Institución universitaria/Escuela Tecnológica,Oficial,magdalena,cienaga
+11.64,13.07,20.49,16.05,1,Institución técnica profesional,Oficial,caldas,pensilvania
+13.07,20.49,16.05,24.32,2,Institución técnica profesional,Oficial,caldas,pensilvania
+20.36,17.32,13.93,18.21,1,Institución técnica profesional,No oficial,valle del cauca,cali
+17.32,13.93,18.21,20.14,2,Institución técnica profesional,No oficial,valle del cauca,cali
+10.67,8.24,8.55,9.93,1,Institución universitaria/Escuela Tecnológica,No oficial,quindio,armenia
+8.24,8.55,9.93,14.25,2,Institución universitaria/Escuela Tecnológica,No oficial,quindio,armenia
+26.83,25.93,20.9,20.41,1,Institución técnica profesional,No oficial,bogota d c,bogota dc
+25.93,20.9,20.41,64.89,2,Institución técnica profesional,No oficial,bogota d c,bogota dc
+21.13,24.31,5.45,9.64,1,Institución técnica profesional,No oficial,bogota d c,bogota dc
+24.31,5.45,9.64,100.0,2,Institución técnica profesional,No oficial,bogota d c,bogota dc
+21.66,15.8,25.58,35.27,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+15.8,25.58,35.27,53.28,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+18.74,13.55,14.57,16.78,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+13.55,14.57,16.78,28.44,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+26.15,25.37,32.17,24.52,1,Institución tecnológica,No oficial,bogota d c,bogota dc
+25.37,32.17,24.52,64.72,2,Institución tecnológica,No oficial,bogota d c,bogota dc
+15.38,25.89,26.09,16.92,1,Institución tecnológica,No oficial,antioquia,medellin
+25.89,26.09,16.92,30.67,2,Institución tecnológica,No oficial,antioquia,medellin
+21.05,22.06,0.0,42.19,1,Institución técnica profesional,No oficial,bogota d c,bogota dc
+22.06,0.0,42.19,57.69,2,Institución técnica profesional,No oficial,bogota d c,bogota dc
+4.26,11.76,6.94,13.33,1,Institución técnica profesional,No oficial,bogota d c,bogota dc
+11.76,6.94,13.33,39.58,2,Institución técnica profesional,No oficial,bogota d c,bogota dc
+13.38,11.44,12.64,9.94,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+11.44,12.64,9.94,8.16,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+17.78,21.54,24.89,21.78,1,Institución técnica profesional,No oficial,bogota d c,bogota dc
+21.54,24.89,21.78,34.56,2,Institución técnica profesional,No oficial,bogota d c,bogota dc
+5.04,7.4,13.59,11.71,1,Institución técnica profesional,No oficial,atlantico,barranquilla
+7.4,13.59,11.71,26.61,2,Institución técnica profesional,No oficial,atlantico,barranquilla
+12.3,12.81,11.91,11.34,1,Institución universitaria/Escuela Tecnológica,No oficial,atlantico,barranquilla
+12.81,11.91,11.34,16.08,2,Institución universitaria/Escuela Tecnológica,No oficial,atlantico,barranquilla
+10.86,14.15,13.23,16.68,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+14.15,13.23,16.68,19.18,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+16.54,12.52,15.18,11.77,1,Institución técnica profesional,No oficial,risaralda,pereira
+12.52,15.18,11.77,19.19,2,Institución técnica profesional,No oficial,risaralda,pereira
+47.13,48.13,53.09,55.56,1,Institución técnica profesional,No oficial,santander,bucaramanga
+48.13,53.09,55.56,100.0,2,Institución técnica profesional,No oficial,santander,bucaramanga
+36.89,27.72,76.43,36.33,1,Institución técnica profesional,No oficial,bogota d c,bogota dc
+27.72,76.43,36.33,85.15,2,Institución técnica profesional,No oficial,bogota d c,bogota dc
+7.31,5.87,7.2,8.71,1,Institución universitaria/Escuela Tecnológica,No oficial,atlantico,barranquilla
+5.87,7.2,8.71,11.24,2,Institución universitaria/Escuela Tecnológica,No oficial,atlantico,barranquilla
+11.1,9.29,12.19,11.16,1,Universidad,No oficial,bogota d c,bogota dc
+9.29,12.19,11.16,12.94,2,Universidad,No oficial,bogota d c,bogota dc
+5.99,22.79,10.39,10.01,1,Universidad,Oficial,bolivar,cartagena de indias
+22.79,10.39,10.01,14.23,2,Universidad,Oficial,bolivar,cartagena de indias
+0.89,21.43,0.1,28.18,1,Institución tecnológica,Oficial,bogota d c,bogota dc
+21.43,0.1,28.18,0.06,2,Institución tecnológica,Oficial,bogota d c,bogota dc
+8.7,10.72,9.24,8.34,1,Institución universitaria/Escuela Tecnológica,No oficial,choco,quibdo
+10.72,9.24,8.34,10.5,2,Institución universitaria/Escuela Tecnológica,No oficial,choco,quibdo
+57.14,15.38,0.0,18.18,1,Institución técnica profesional,No oficial,bogota d c,bogota dc
+15.38,0.0,18.18,33.33,2,Institución técnica profesional,No oficial,bogota d c,bogota dc
+11.22,11.78,13.97,14.05,1,Institución universitaria/Escuela Tecnológica,No oficial,atlantico,barranquilla
+11.78,13.97,14.05,19.03,2,Institución universitaria/Escuela Tecnológica,No oficial,atlantico,barranquilla
+12.84,12.68,13.89,14.9,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+12.68,13.89,14.9,15.0,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+9.42,10.85,9.47,10.58,1,Institución universitaria/Escuela Tecnológica,No oficial,bolivar,cartagena de indias
+10.85,9.47,10.58,11.77,2,Institución universitaria/Escuela Tecnológica,No oficial,bolivar,cartagena de indias
+5.01,5.88,10.57,9.63,1,Universidad,No oficial,santander,bucaramanga
+5.88,10.57,9.63,9.28,2,Universidad,No oficial,santander,bucaramanga
+39.13,8.75,2.25,3.57,1,Institución tecnológica,No oficial,antioquia,marinilla
+8.75,2.25,3.57,4.17,2,Institución tecnológica,No oficial,antioquia,marinilla
+19.68,20.92,17.58,14.61,1,Institución tecnológica,No oficial,atlantico,barranquilla
+20.92,17.58,14.61,29.92,2,Institución tecnológica,No oficial,atlantico,barranquilla
+12.08,10.73,10.57,15.57,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,sabaneta
+10.73,10.57,15.57,15.09,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,sabaneta
+8.02,14.27,11.54,18.43,1,Institución tecnológica,No oficial,bogota d c,bogota dc
+14.27,11.54,18.43,14.91,2,Institución tecnológica,No oficial,bogota d c,bogota dc
+12.11,13.34,12.07,13.05,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+13.34,12.07,13.05,15.82,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+9.79,10.02,10.16,15.0,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+10.02,10.16,15.0,13.22,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+6.98,7.72,7.83,9.33,1,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+7.72,7.83,9.33,16.82,2,Institución universitaria/Escuela Tecnológica,No oficial,antioquia,medellin
+20.69,16.04,18.46,22.65,1,Institución universitaria/Escuela Tecnológica,No oficial,santander,bucaramanga
+16.04,18.46,22.65,28.76,2,Institución universitaria/Escuela Tecnológica,No oficial,santander,bucaramanga
+6.37,13.23,10.0,12.11,1,Institución tecnológica,No oficial,bogota d c,bogota dc
+13.23,10.0,12.11,21.82,2,Institución tecnológica,No oficial,bogota d c,bogota dc
+28.46,28.16,20.85,16.92,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+28.16,20.85,16.92,43.42,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+12.32,19.92,12.09,15.44,1,Institución universitaria/Escuela Tecnológica,No oficial,huila,rivera
+19.92,12.09,15.44,13.79,2,Institución universitaria/Escuela Tecnológica,No oficial,huila,rivera
+13.46,9.42,12.98,24.72,1,Institución universitaria/Escuela Tecnológica,No oficial,valle del cauca,cali
+9.42,12.98,24.72,37.93,2,Institución universitaria/Escuela Tecnológica,No oficial,valle del cauca,cali
+5.75,10.75,6.14,6.63,1,Institución universitaria/Escuela Tecnológica,No oficial,huila,neiva
+10.75,6.14,6.63,8.99,2,Institución universitaria/Escuela Tecnológica,No oficial,huila,neiva
+28.92,25.51,31.25,15.19,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+25.51,31.25,15.19,36.34,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+15.2,15.94,17.5,16.2,1,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
+15.94,17.5,16.2,28.28,2,Institución universitaria/Escuela Tecnológica,No oficial,bogota d c,bogota dc
