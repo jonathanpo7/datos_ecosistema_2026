@@ -130,8 +130,28 @@ Mejora del modelo sobre persistencia (TEST agregado): **−0.07 RMSE / +0.10 MAE
 
 ---
 
+## PR-4 · `chore/persistir-modelo-y-semillas` — Reproducibilidad y trazabilidad (A3, R1)
+
+**Objetivo:** que la corrida sea reproducible bit-a-bit y que el modelo/params/métricas queden persistidos.
+
+**Cambios (`entrenamiento_csv/model.ipynb`):**
+1. Celda imports (`eaa35542`): `import random`; `np.random.seed(42)`; `random.seed(42)` (semillas globales, complementan `TPESampler(seed=42)`).
+2. Nueva celda (`21b2ae90`): `modelo_final.save_model('model_xgb.json')`; `json.dump(study.best_params, 'best_params.json')`; y `metrics.json` con el cuadro honesto completo (val, test agregado, por horizonte, baselines).
+
+**Artefactos generados (en `entrenamiento_csv/`):**
+- `model_xgb.json` (~1.27 MB) — modelo XGBoost serializado.
+- `best_params.json` (246 B) — hiperparámetros ganadores.
+- `metrics.json` (753 B) — todas las métricas honestas.
+
+**Verificación de reproducibilidad (R1):** el `best_value` de Optuna es **4.3578**, idéntico al de la corrida de PR-1 → la búsqueda es reproducible. EXIT=0.
+
+**Commit:** `chore(model): semillas globales + persistencia de modelo/params/metricas (A3, R1)`
+
+> Nota: `model_xgb.json` (1.27 MB) es estable (semillas fijas) y se versiona junto al número reportado, como recomienda A3. Si el equipo prefiere, puede moverse a un release/LFS (se deja fuera del `.gitignore` de datos en PR-5).
+
+---
+
 ## Pendiente (no bloqueante para presentar)
 
-- PR-4 `chore/persistir-modelo-y-semillas` (A3, R1): `np.random.seed`/`random.seed` globales + `save_model` + `json.dump(best_params/metrics)`.
 - PR-5 `chore/requirements-y-licencia` (R2, S02-2/3/4): `requirements.txt` pineado (incl. `pillow>=12.2.0`), `LICENSE`, nota de licencia de datos SNIES.
 - Mejoras (PR-6+): saneamiento de tasa, `.copy()` en splits, métricas de ranking/Precision@K, SHAP, dashboard, conformal — detalladas en `00_INFORME_MAESTRO.md §3`.
