@@ -146,7 +146,8 @@ En **validación** el modelo supera ampliamente a la persistencia; en el **test 
 ### Requisitos
 
 ```bash
-pip install pandas numpy xgboost scikit-learn optuna matplotlib seaborn
+# Dependencias con versiones fijadas (reproducibilidad):
+pip install -r requirements.txt
 ```
 
 ### Orden de ejecución
@@ -163,3 +164,11 @@ pip install pandas numpy xgboost scikit-learn optuna matplotlib seaborn
 - Feature engineering: tendencia (`lag1 - lag4`), momentum (`lag1 - lag2`), volatilidad de la serie
 - Dashboard interactivo para visualización de predicciones por IES y departamento
 - Incorporación de variables externas: tasas de desempleo regional, indicadores socioeconómicos
+- Métricas de priorización/ranking (Precision@K) e interpretabilidad (SHAP); backtesting multi-ventana
+
+---
+
+## Licencia
+
+- **Código:** licencia [MIT](LICENSE).
+- **Datos:** los archivos `MEN_*.csv` y derivados provienen del **SNIES** (Ministerio de Educación Nacional de Colombia), datos abiertos de carácter público; su uso se rige por los términos del portal de datos abiertos del MEN, no por la licencia MIT del código. Revisar las bases del concurso "Datos al Ecosistema 2026" para los términos de la entrega.

@@ -151,7 +151,34 @@ Mejora del modelo sobre persistencia (TEST agregado): **−0.07 RMSE / +0.10 MAE
 
 ---
 
-## Pendiente (no bloqueante para presentar)
+## PR-5 · `chore/requirements-y-licencia` — Dependencias y legal (R2, S02-2, S02-3, S02-4)
 
-- PR-5 `chore/requirements-y-licencia` (R2, S02-2/3/4): `requirements.txt` pineado (incl. `pillow>=12.2.0`), `LICENSE`, nota de licencia de datos SNIES.
-- Mejoras (PR-6+): saneamiento de tasa, `.copy()` en splits, métricas de ranking/Precision@K, SHAP, dashboard, conformal — detalladas en `00_INFORME_MAESTRO.md §3`.
+**Objetivo:** entorno reproducible y código legalmente reutilizable (requisito típico de concurso).
+
+**Cambios:**
+1. `requirements.txt` (nuevo): versiones fijadas verificadas con Python 3.13 — pandas 2.3.2, numpy 2.3.3, scikit-learn 1.8.0, xgboost 3.3.0, optuna 4.9.0, matplotlib 3.10.8, seaborn 0.13.2, nbconvert 7.17.1, ipykernel 7.3.0, y **`pillow>=12.2.0`** (corrige los 6 CVEs de la 11.3.0 transitiva de matplotlib, S02-4).
+2. `LICENSE` (nuevo): MIT para el código + nota de que los datos `MEN_*.csv` son del SNIES (datos abiertos públicos), regidos por los términos del MEN, no por MIT.
+3. `README.md`: `pip install -r requirements.txt`; sección "Licencia".
+
+**Verificación:** `pip install --dry-run -r requirements.txt` → EXIT=0, resuelve sin conflictos; instalaría `pillow-12.2.0` (el fix de seguridad).
+
+**Commit:** `chore: requirements.txt pineado (con pillow>=12.2.0) + LICENSE MIT + nota datos SNIES (R2, S02-2/3/4)`
+
+---
+
+## Resumen de commits (rama base `chore/auditoria-inicial`, ramas apiladas)
+
+| Commit | Rama | Qué |
+|--------|------|-----|
+| `38eb77a` | chore/auditoria-inicial | docs: auditoría (7 informes + CLAUDE.md + skill) |
+| `f9a29c9` | fix/optuna-objective-validacion | PR-1: elimina leakage C1 (Optuna→val) |
+| `57f3641` | feat/forecast-recursivo-t1-t2 | PR-2: forecast recursivo por horizonte (C2, D1) |
+| `4d44cec` | feat/baseline-persistencia | PR-3: baselines persistencia/media (ML-2) |
+| `ec0424a` | chore/persistir-modelo-y-semillas | PR-4: semillas + persistencia (A3, R1) |
+| *(este)* | chore/requirements-y-licencia | PR-5: requirements + LICENSE (R2, S02-2/3/4) |
+
+**Política:** todos los commits son **locales**. NO se ha hecho `git push` (pendiente de autorización del usuario).
+
+## Pendiente (mejoras no bloqueantes — ver `00_INFORME_MAESTRO.md §3`)
+
+PR-6 saneamiento de tasa (DQ-TARGET/DQ-CLIP) · PR-7 `.copy()` en splits (A2) · PR-8 métricas de ranking/Precision@K + error por segmento (ML-1/ML-5) · SHAP (WEB-6) · dashboard (WEB-9) · conformal (WEB-7) · backtesting rolling-origin (ML-7) · higiene de repo: sacar CSV de 99 MB del historial + `.gitignore` de datos + `nbstripout` (H1/H2/H3) — esto último requiere reescritura de historial y `--force`, por lo que se hará solo con autorización explícita.

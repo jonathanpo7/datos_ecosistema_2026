@@ -1,0 +1,23 @@
+# Dependencias del proyecto datos_ecosistema_2026 (verificadas con Python 3.13).
+# Versiones fijadas para reproducibilidad del resultado reportado (R2 / S02-3).
+# Genera el RMSE/MAE de README.md al ejecutar el pipeline en este orden:
+#   1) EDA_preprocesamiento.ipynb  2) dataset.ipynb  3) entrenamiento_csv/model.ipynb
+
+# --- Nucleo de datos y modelado ---
+pandas==2.3.2
+numpy==2.3.3
+scikit-learn==1.8.0
+xgboost==3.3.0
+optuna==4.9.0
+
+# --- Visualizacion ---
+matplotlib==3.10.8
+seaborn==0.13.2
+
+# --- Ejecucion de notebooks ---
+nbconvert==7.17.1
+ipykernel==7.3.0
+
+# --- Seguridad: Pillow es transitiva de matplotlib; 11.3.0 tiene 6 CVEs (S02-4).
+# Se exige una version corregida.
+pillow>=12.2.0
