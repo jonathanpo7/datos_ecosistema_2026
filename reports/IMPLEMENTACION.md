@@ -166,6 +166,26 @@ Mejora del modelo sobre persistencia (TEST agregado): **−0.07 RMSE / +0.10 MAE
 
 ---
 
+## PR-8 · `feat/metricas-ranking-y-error-por-segmento` — Adecuación al caso de uso (ML-1, ML-5)
+
+**Objetivo:** medir lo que realmente importa (priorizar IES en riesgo), no solo el error promedio.
+
+**Cambios (`entrenamiento_csv/model.ipynb`):** nueva celda (`d4fe00e9`) sobre el horizonte t+1 (2024-1) con: Spearman (ranking), Precision@K/Recall@K (K=20,50), clasificación de riesgo (tasa ≥ p75) y MAE por segmento (CARACTER y departamento).
+
+**Verificación (ejecución real, EXIT=0):**
+- **Spearman = 0.872** (el modelo ordena bien las IES por deserción).
+- Precision@20 = 0.65 (13/20) · Precision@50 = 0.74 (37/50).
+- Riesgo (tasa ≥ p75 = 16.3%): Precision **0.94** / Recall 0.43 / F1 0.59.
+- MAE por carácter: Universidad **1.66** (n=118), Inst. universitaria 4.75 (n=104), Inst. tecnológica 7.12 (n=25), **Inst. técnica profesional 21.58** (n=18).
+
+**Lectura:** aunque el RMSE agregado empata con la persistencia, el **ranking** es fuerte (Spearman 0.872) — la utilidad real del modelo está en la **priorización**, no en el error promedio. El error por segmento aporta transparencia para uso responsable (muy fiable en universidades, poco fiable en técnicas profesionales). El mojibake en CARACTER (DQ-MOJIBAKE) sigue visible → pendiente PR-6.
+
+**README:** subsección "Priorización y error por segmento".
+
+**Commit:** `feat(model): metricas de ranking/priorizacion (Spearman, Precision@K) y error por segmento (ML-1, ML-5)`
+
+---
+
 ## Resumen de commits (rama base `chore/auditoria-inicial`, ramas apiladas)
 
 | Commit | Rama | Qué |
@@ -175,7 +195,8 @@ Mejora del modelo sobre persistencia (TEST agregado): **−0.07 RMSE / +0.10 MAE
 | `57f3641` | feat/forecast-recursivo-t1-t2 | PR-2: forecast recursivo por horizonte (C2, D1) |
 | `4d44cec` | feat/baseline-persistencia | PR-3: baselines persistencia/media (ML-2) |
 | `ec0424a` | chore/persistir-modelo-y-semillas | PR-4: semillas + persistencia (A3, R1) |
-| *(este)* | chore/requirements-y-licencia | PR-5: requirements + LICENSE (R2, S02-2/3/4) |
+| `78df299` | chore/requirements-y-licencia | PR-5: requirements + LICENSE (R2, S02-2/3/4) |
+| *(este)* | feat/metricas-ranking-y-error-por-segmento | PR-8: ranking/Precision@K + error por segmento (ML-1, ML-5) |
 
 **Política:** todos los commits son **locales**. NO se ha hecho `git push` (pendiente de autorización del usuario).
 

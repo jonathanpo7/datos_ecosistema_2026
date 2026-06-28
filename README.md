@@ -118,7 +118,26 @@ Dos conclusiones: (1) **el modelo supera a la persistencia en ambos horizontes**
 | Persistencia (`lag1`) | 8.18 / 3.15 | 10.07 / 4.42 |
 | Media (`y_train`) | 7.38 / 5.74 | 13.51 / 7.59 |
 
-En **validación** el modelo supera ampliamente a la persistencia; en el **test agregado** prácticamente empata (las tasas de deserción son muy persistentes, así que "repetir el último valor" es un rival fuerte). La ventaja real del modelo se ve sobre todo (a) en la evaluación **por horizonte** (tabla anterior, donde gana en t+1 y t+2) y (b) potencialmente en la **priorización/ranking** de IES en riesgo. La gran brecha validación→test confirma la necesidad de **backtesting multi-ventana** (un solo semestre de validación no es representativo).
+En **validación** el modelo supera ampliamente a la persistencia; en el **test agregado** prácticamente empata (las tasas de deserción son muy persistentes, así que "repetir el último valor" es un rival fuerte). La ventaja real del modelo se ve sobre todo (a) en la evaluación **por horizonte** (tabla anterior, donde gana en t+1 y t+2) y (b) en la **priorización/ranking** de IES en riesgo (abajo). La gran brecha validación→test confirma la necesidad de **backtesting multi-ventana** (un solo semestre de validación no es representativo).
+
+### Priorización y error por segmento
+
+El caso de uso real es **priorizar IES en riesgo**, no solo minimizar el error promedio. Evaluado sobre 2024-1:
+
+- **Ranking (Spearman predicho vs real): 0.872** — el modelo ordena bien las IES por nivel de deserción.
+- **Precision@20 = 0.65** · **Precision@50 = 0.74** — de las 50 IES que el modelo señala como de mayor deserción, 37 lo son de verdad.
+- **Clasificación "en riesgo" (tasa ≥ p75 = 16.3%): Precision 0.94 / Recall 0.43 / F1 0.59** — cuando el modelo marca una IES como de alto riesgo, acierta el 94% de las veces.
+
+**Dónde confiar (MAE por tipo de IES, 2024-1):**
+
+| Carácter institucional | MAE | n |
+|------------------------|-----|---|
+| Universidad | **1.66** | 118 |
+| Inst. universitaria / Escuela Tecnológica | 4.75 | 104 |
+| Institución tecnológica | 7.12 | 25 |
+| Institución técnica profesional | **21.58** | 18 |
+
+El modelo es **muy confiable para universidades** (error ≈ 1.7 pp) y **poco confiable para instituciones técnicas profesionales** (error ≈ 21 pp): para esas IES las predicciones deben tomarse con cautela. Esta transparencia por segmento es clave para un uso responsable en política pública.
 
 ---
 
