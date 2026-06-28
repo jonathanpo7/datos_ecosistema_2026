@@ -21,28 +21,31 @@ entrenamiento_csv/model.ipynb → XGBoost + Optuna + evaluación
 **Split temporal:** train ≤2023-1 · val 2023-2 · test 2024-1/2024-2.
 
 ## Estado actual (jun 2026)
-**En auditoría — 100% lectura.** No modificar código del proyecto sin aprobar el plan de PRs.
-Informes completos en [`reports/`](../../reports/) (empezar por `00_INFORME_MAESTRO.md`).
+**Auditoría completa + correcciones implementadas** en el **PR #1** (rama `feat/correcciones-auditoria-2026`), aún **sin mergear a `main`**. 📄 Empezar por [`ESTADO_DEL_PROYECTO.md`](../../../ESTADO_DEL_PROYECTO.md); auditoría en [`reports/`](../../../reports/); bitácora de cambios en `reports/IMPLEMENTACION.md`.
 
-## Hallazgos clave (verificados contra el código)
-| ID | Sev | Qué | Dónde |
-|----|-----|-----|-------|
-| **C1** | 🔴 | Optuna minimiza el RMSE de **TEST**, no de val (leakage de selección); README L78/L89 lo niega = falso | `model.ipynb` celda 9 |
-| **C2** | 🔴 | No hay forecast recursivo t+1→t+2; 2024-2 usa la tasa **real** de 2024-1 como lag1 | `dataset.ipynb` + `model.ipynb` |
-| **ML-2** | 🟠 | Sin baseline de persistencia; el modelo (9.5) apenas supera a `lag1` (TEST 10.07, VAL 8.18) | `model.ipynb` |
-| **A3 / R1** | 🟠 | No persiste modelo/`best_params`; Optuna sin semilla → no reproducible | `model.ipynb` celdas 9/10 |
-| **DQ-TARGET** | 🟠 | Tasa no acotada en origen (llega a 138 700% por denominador=1) | `EDA` celda 12 |
-| **H1** | 🟠 | CSV de 99 MB versionado y en historial git; sin `LICENSE`; sin `requirements.txt` | repo |
+## Hallazgos clave y su estado
+| ID | Sev | Qué | Estado |
+|----|-----|-----|--------|
+| **C1** | 🔴 | Optuna minimizaba RMSE de **TEST** (leakage de selección) | ✅ Resuelto (objective→val) |
+| **C2** | 🔴 | Sin forecast recursivo t+1→t+2 (leakage temporal) | ✅ Resuelto (recursivo + por horizonte) |
+| **ML-2** | 🟠 | Sin baseline de persistencia | ✅ Resuelto |
+| **A3 / R1** | 🟠 | No persistía modelo; Optuna sin semilla | ✅ Resuelto |
+| **R2 / S02 / ML-1 / WEB-6/7/9** | 🟡/🟠 | requirements/LICENSE/Pillow; ranking/SHAP/conformal/dashboard | ✅ Resuelto |
+| **DQ-TARGET** | 🟠 | Tasa no acotada (138 700%) | ⏳ Pendiente (cascada EDA) |
+| **A2** | 🟡 | `SettingWithCopyWarning` | ⏳ Pendiente |
+| **H1** | 🟠 | CSV de 99 MB en historial git | ⏳ Pendiente (destructivo — requiere acuerdo) |
 
-**Correcciones a hipótesis previas:** A1 (`dic`/`.replace()` comentado) es **código muerto, NO duplica categorías** (falso positivo). `.gitignore` SÍ existe (no cubre datos). README dice 9.48/4.23 pero el notebook hoy da 9.51/4.16.
+**Métrica honesta (tras corregir):** RMSE test 10.14 (antes 9.48 con leakage); por horizonte t+1 11.16 / t+2 10.49; **ranking Spearman 0.872**; backtesting modelo 7.52 vs persistencia 8.33.
 
-**Lo que está bien (no romper):** README; split temporal correcto en concepto; `early_stopping` sobre val; `set_categories` alinea val/test; sin PII de personas naturales; diagnóstico de cobertura riguroso.
+**Correcciones a hipótesis previas:** A1 era **código muerto, NO duplicaba categorías** (falso positivo). `.gitignore` SÍ existe. CARACTER en `df_forecast_raw.csv` tiene acentos correctos (el `?` en consola Windows es solo render).
+
+**Lo que está bien (no romper):** README; split temporal correcto en concepto; `set_categories`; sin PII de personas naturales; diagnóstico de cobertura riguroso.
 
 ## Reglas de ramas / PRs
-- Rama base de la auditoría: `chore/auditoria-inicial`.
-- **Convención:** `fix/...` (leakage, bugs), `feat/...` (baseline, SHAP, features, dashboard, conformal), `chore/...` (requirements, .gitignore de datos, licencia, persistencia, higiene).
-- **Orden must-fix (nombres canónicos del informe maestro):** `fix/optuna-objective-validacion` → `feat/forecast-recursivo-t1-t2` → `feat/baseline-persistencia` → `chore/persistir-modelo-y-semillas` → `chore/requirements-y-licencia`. Detalle completo (objetivo, archivos, criterio de aceptación) en `reports/00_INFORME_MAESTRO.md §3`.
-- **No `git push` ni subir a GitHub sin autorización explícita del usuario.** No versionar datos pesados nuevos (usar DVC / enlace al SNIES).
+- Trabajo actual en el **PR #1** (rama `feat/correcciones-auditoria-2026`); **no mergeado a `main`**.
+- **Convención:** `fix/...` (leakage, bugs), `feat/...` (baseline, SHAP, dashboard, features), `chore/...` (requirements, licencia, persistencia, higiene).
+- **No `git push` a `main` ni force-push sin acuerdo del equipo.** No reescribir el historial (CSV de 99 MB) sin OK explícito. No versionar datos pesados nuevos (DVC / enlace al SNIES).
+- Reproducibilidad: semillas fijadas (seed=42); `requirements.txt` pineado.
 
-## Para ganar (resumen de `reports/04_ideas_ganar.md`)
-Quick wins: (1) baseline de persistencia + corregir leakage; (2) SHAP + error por segmento; (3) dashboard + narrativa de impacto con cifras. Luego: métricas de priorización (Precision@K), feature engineering (tendencia/momentum/volatilidad), intervalos conformal, backtesting rolling-origin.
+## Para ganar (estado)
+✅ **Hechos:** corregir leakage, baseline de persistencia, métricas de priorización (Precision@K, Spearman), error por segmento, SHAP, conformal, backtesting, dashboard Streamlit. ⏳ **Pendiente:** saneamiento de la tasa (DQ-TARGET), feature engineering (tendencia/momentum/volatilidad), mapa coroplético, narrativa de impacto cuantificada, presentación/pitch. Detalle en `ESTADO_DEL_PROYECTO.md §6` y `reports/04_ideas_ganar.md`.

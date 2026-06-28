@@ -2,7 +2,7 @@
 
 > Guía para Claude Code (y para el equipo) al trabajar en este repositorio.
 > Proyecto del concurso **"Datos al Ecosistema 2026"**.
-> Estado: **en auditoría** (ver `reports/`). Este archivo es la base de contexto; se enriquece con la skill del proyecto (`.claude/skills/`).
+> Estado: **auditoría completa + correcciones implementadas** (PR #1). 📄 **Empieza por [`ESTADO_DEL_PROYECTO.md`](ESTADO_DEL_PROYECTO.md)** — documento maestro de estado (qué se hizo, qué falta, qué sigue). Detalle de la auditoría en `reports/`; bitácora de cambios en `reports/IMPLEMENTACION.md`.
 
 ## Qué es este proyecto
 
@@ -53,8 +53,7 @@ entrenamiento_csv/model.ipynb  # XGBoost + Optuna + evaluación
 ## Cómo reproducir
 
 ```bash
-# No hay requirements.txt (pendiente — ver auditoría). Dependencias declaradas en README:
-pip install pandas numpy xgboost scikit-learn optuna matplotlib seaborn jupyter
+pip install -r requirements.txt
 ```
 
 1. Ejecutar `EDA_preprocesamiento.ipynb` (genera `df_forecast_raw.csv`).
@@ -63,15 +62,22 @@ pip install pandas numpy xgboost scikit-learn optuna matplotlib seaborn jupyter
 
 > Los datos fuente `MEN_*.csv` provienen del portal del SNIES — MEN Colombia.
 
-## Estado actual y hallazgos clave (resumen — detalle en `reports/`)
+## Estado actual y hallazgos clave
 
-| ID | Sev | Hallazgo |
-|----|-----|----------|
-| **C1** | 🔴 Crítica | `model.ipynb` (celda 9): la función `objective` de Optuna evalúa sobre `x_test/y_test` → **los hiperparámetros se eligen mirando el test** (data leakage). El README afirma lo contrario. |
-| **C2** | 🔴 Crítica | La evaluación no implementa el forecast recursivo t+1→t+2 que describe el README; usa la tasa real del semestre intermedio → leakage temporal. |
-| **A1** | 🟠 Alta | En el EDA, el diccionario `dic` de normalización de departamentos está definido pero su `.replace()` está **comentado** → categorías duplicadas. |
-| **A2** | 🟠 Alta | `SettingWithCopyWarning` en `dataset.ipynb` (slices sin `.copy()`). |
-| **A3** | 🟠 Alta | No se persiste el modelo ni los `best_params` (sin `.pkl`/`.json`). |
+**Auditoría completa + correcciones implementadas** (PR #1). Estado por hallazgo en [`ESTADO_DEL_PROYECTO.md §5`](ESTADO_DEL_PROYECTO.md). Lo esencial:
+
+| ID | Sev | Hallazgo | Estado |
+|----|-----|----------|--------|
+| **C1** | 🔴 Crítica | Optuna optimizaba sobre el test (leakage de selección) | ✅ Resuelto (objective→val) |
+| **C2** | 🔴 Crítica | Sin forecast recursivo t+1→t+2 (leakage temporal) | ✅ Resuelto (recursivo + métricas por horizonte) |
+| **ML-2** | 🟠 Alta | Sin baseline de persistencia | ✅ Resuelto |
+| **A3 / R1** | 🟠 Alta | No persistía modelo; Optuna sin semilla | ✅ Resuelto |
+| **R2 / S02** | 🟡/🟠 | Sin requirements/LICENSE; Pillow vulnerable | ✅ Resuelto |
+| **ML-1/WEB-6/7/9** | 🟠 Alta | Sin ranking, SHAP, conformal, dashboard | ✅ Resuelto |
+| **DQ-TARGET** | 🟠 Alta | Tasa no acotada en origen (138 700%) | ⏳ Pendiente (cascada EDA) |
+| **A2** | 🟡 Media | `SettingWithCopyWarning` (slices sin `.copy()`) | ⏳ Pendiente |
+| **H1** | 🟠 Alta | CSV de 99 MB en historial git | ⏳ Pendiente (destructivo — requiere acuerdo) |
+| **A1** | INFO | dic/.replace comentado | ✅ Reclasificado: era código muerto, NO duplicaba categorías |
 
 **Lo que está bien** (no romper): README; manejo de NaN reales con `min_count=1`; split temporal correcto en concepto; diagnóstico de cobertura riguroso; `enable_categorical` + `set_categories`.
 
@@ -81,10 +87,11 @@ Este repo incluye una skill propia en [`.claude/skills/datos-ecosistema-2026/`](
 
 ## Reglas de trabajo
 
-- **Misión actual = auditoría 100% lectura.** No modificar el código del proyecto sin aprobación explícita del plan de PRs (ver `reports/00_INFORME_MAESTRO.md`).
-- **Ramas (convención):** `fix/...` (correcciones de leakage/bugs), `feat/...` (baseline, SHAP, features, dashboard), `chore/...` (requirements, .gitignore de datos, licencia, persistencia).
-- **No versionar datos pesados** nuevos: el CSV de ~99 MB ya infla el repo; preferir DVC / enlaces a la fuente SNIES en cambios futuros.
-- **No exponer credenciales**: ninguna debería existir aquí (es data pública), pero validar antes de cada commit.
+- **Estado:** correcciones implementadas en el **PR #1** (rama `feat/correcciones-auditoria-2026`); aún **no mergeado a `main`** (espera revisión del equipo).
+- **Ramas (convención):** `fix/...` (leakage/bugs), `feat/...` (baseline, SHAP, dashboard, features), `chore/...` (requirements, licencia, persistencia, higiene).
+- **No `git push` a `main` ni force-push** sin autorización del equipo. Trabajar siempre por PR. No reescribir el historial (CSV de 99 MB) sin acuerdo explícito.
+- **No versionar datos pesados** nuevos: preferir DVC / enlace a la fuente SNIES.
+- **Reproducibilidad:** semillas fijadas (seed=42); `requirements.txt` pineado.
 
 ---
-*Generado por Claude Code durante la auditoría del proyecto. Ver `reports/00_INFORME_MAESTRO.md` para el informe consolidado.*
+*Mantenido por Claude Code. Documento de estado vivo: [`ESTADO_DEL_PROYECTO.md`](ESTADO_DEL_PROYECTO.md). Auditoría: `reports/`. Bitácora de cambios: `reports/IMPLEMENTACION.md`.*

@@ -2,6 +2,8 @@
 
 Modelo de machine learning que predice la tasa de deserción estudiantil por IES para los dos semestres siguientes (1 año adelante), usando series históricas del SNIES.
 
+> 🧭 **¿Eres del equipo? Empieza por [`ESTADO_DEL_PROYECTO.md`](ESTADO_DEL_PROYECTO.md)** — qué se hizo, qué falta y qué sigue. Las correcciones y el dashboard están en el [PR #1](https://github.com/jonathanpo7/datos_ecosistema_2026/pull/1).
+
 ---
 
 ## Flujo del proyecto
