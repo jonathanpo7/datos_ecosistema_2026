@@ -102,4 +102,36 @@ Entorno: xgboost 3.3.0 · optuna 4.9.0 · sklearn 1.8.0. Ejecución EXIT=0; outp
 
 **README:** añadida subsección "Evaluación honesta por horizonte (forecast recursivo)" con la tabla. La afirmación del README sobre enfoque recursivo (L76) ahora SÍ está implementada.
 
-**Commit:** `feat(model): evaluacion recursiva honesta t+1->t+2 por horizonte (corrige C2); elimina import muerto (D1)`
+**Commit:** `feat(model): evaluacion recursiva honesta t+1->t+2 por horizonte (corrige C2); elimina import muerto (D1)` (`57f3641`)
+
+---
+
+## PR-3 · `feat/baseline-persistencia` — Baselines triviales (ML-2)
+
+**Objetivo:** demostrar de forma explícita si el modelo aporta sobre lo trivial, con baselines evaluados en el mismo protocolo y splits.
+
+**Cambios (`entrenamiento_csv/model.ipynb`):** nueva celda markdown `5dfd2bd8` + código `2effbf59` que calcula y tabula **persistencia** (`ŷ = lag1`) y **media** (`ŷ = media(y_train)`) junto al modelo, en validación y test, y la mejora del modelo sobre persistencia.
+
+**Verificación (ejecución real, EXIT=0):**
+
+| Modelo / Baseline | VAL RMSE / MAE | TEST RMSE / MAE |
+|-------------------|----------------|------------------|
+| XGBoost (Optuna sobre val) | **4.36 / 2.81** | 10.14 / 4.31 |
+| Persistencia (`lag1`) | 8.18 / 3.15 | 10.07 / 4.42 |
+| Media (`y_train`) | 7.38 / 5.74 | 13.51 / 7.59 |
+
+Mejora del modelo sobre persistencia (TEST agregado): **−0.07 RMSE / +0.10 MAE** (empate técnico).
+
+**Lectura honesta:** en validación el modelo arrasa (4.36 vs 8.18), en test agregado empata con persistencia, y por horizonte (PR-2) la supera. Coincide exactamente con los números reproducidos en la auditoría (01_codigo_ml.md, ML-2). La enorme brecha val→test refuerza ML-7 (falta backtesting multi-ventana).
+
+**README:** subsección "Comparación contra baselines (mismo protocolo y splits)".
+
+**Commit:** `feat(model): baselines de persistencia y media con tabla comparativa (ML-2)`
+
+---
+
+## Pendiente (no bloqueante para presentar)
+
+- PR-4 `chore/persistir-modelo-y-semillas` (A3, R1): `np.random.seed`/`random.seed` globales + `save_model` + `json.dump(best_params/metrics)`.
+- PR-5 `chore/requirements-y-licencia` (R2, S02-2/3/4): `requirements.txt` pineado (incl. `pillow>=12.2.0`), `LICENSE`, nota de licencia de datos SNIES.
+- Mejoras (PR-6+): saneamiento de tasa, `.copy()` en splits, métricas de ranking/Precision@K, SHAP, dashboard, conformal — detalladas en `00_INFORME_MAESTRO.md §3`.

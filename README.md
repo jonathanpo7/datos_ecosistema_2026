@@ -110,6 +110,16 @@ El producto promete un pronóstico a un año emitido en un único corte (fin de 
 
 Dos conclusiones: (1) **el modelo supera a la persistencia en ambos horizontes** cuando se le mide de forma justa (≈0.3 RMSE en t+1, ≈0.7 en t+2); (2) usar la tasa **real** de 2024-1 (en vez de la predicha) hacía que t+2 pareciera mucho mejor de lo que honestamente es (RMSE 8.99 vs 10.49) — ese era el *leakage temporal* ahora corregido con la evaluación recursiva.
 
+### Comparación contra baselines (mismo protocolo y splits)
+
+| Modelo / Baseline | VAL (RMSE / MAE) | TEST agregado (RMSE / MAE) |
+|-------------------|------------------|----------------------------|
+| **XGBoost** (Optuna sobre validación) | **4.36 / 2.81** | 10.14 / 4.31 |
+| Persistencia (`lag1`) | 8.18 / 3.15 | 10.07 / 4.42 |
+| Media (`y_train`) | 7.38 / 5.74 | 13.51 / 7.59 |
+
+En **validación** el modelo supera ampliamente a la persistencia; en el **test agregado** prácticamente empata (las tasas de deserción son muy persistentes, así que "repetir el último valor" es un rival fuerte). La ventaja real del modelo se ve sobre todo (a) en la evaluación **por horizonte** (tabla anterior, donde gana en t+1 y t+2) y (b) potencialmente en la **priorización/ranking** de IES en riesgo. La gran brecha validación→test confirma la necesidad de **backtesting multi-ventana** (un solo semestre de validación no es representativo).
+
 ---
 
 ## Estructura del proyecto
