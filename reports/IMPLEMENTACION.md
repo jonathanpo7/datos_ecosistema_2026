@@ -186,6 +186,27 @@ Mejora del modelo sobre persistencia (TEST agregado): **−0.07 RMSE / +0.10 MAE
 
 ---
 
+## Push a GitHub + PR
+
+- Rama consolidada `feat/correcciones-auditoria-2026` (contiene los 7 commits anteriores) **pusheada** a `jonathanpo7/datos_ecosistema_2026` (acceso de escritura verificado).
+- **PR #1** creado: https://github.com/jonathanpo7/datos_ecosistema_2026/pull/1 (hacia `main`, sin force-push, `main` intacto en `1d6f252`).
+
+## Dashboard · `dashboard/` — Entregable visual (WEB-9)
+
+**Objetivo:** dashboard interactivo de alerta temprana para priorización por secretarías de educación.
+
+**Archivos nuevos:**
+- `dashboard/generar_predicciones.py`: carga el modelo persistido + `df_forecast_raw.csv`, reconstruye las ventanas de 2024, predice (2024-2 recursivo) y exporta `predicciones_2024.csv`. Sanity: RMSE vs real 11.16 (idéntico al notebook → reproduce el modelo).
+- `dashboard/app.py`: Streamlit + Plotly — KPIs, ranking de riesgo (Top-20), agregado por departamento, detalle por IES (serie histórica + pronóstico). Filtros por departamento/carácter/nivel de riesgo/tendencia.
+- `dashboard/predicciones_2024.csv` (regenerable) y `dashboard/README.md`.
+- `requirements.txt`: + `streamlit==1.58.0`, `plotly==6.8.0`.
+
+**Verificación:** `streamlit.testing.v1.AppTest` (headless) → **0 excepciones** en carga inicial, al filtrar (Alto → 13 IES) y en el tab de detalle por IES. 265 IES, 13 en riesgo alto. Nota: los acentos de CARACTER en `df_forecast_raw.csv` son correctos (ó=U+00F3); el `?` en consola Windows es solo render, no mojibake real.
+
+**Commit:** `feat(dashboard): dashboard Streamlit de alerta temprana de desercion por IES (WEB-9)`
+
+---
+
 ## Resumen de commits (rama base `chore/auditoria-inicial`, ramas apiladas)
 
 | Commit | Rama | Qué |

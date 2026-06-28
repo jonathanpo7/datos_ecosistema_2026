@@ -21,3 +21,7 @@ ipykernel==7.3.0
 # --- Seguridad: Pillow es transitiva de matplotlib; 11.3.0 tiene 6 CVEs (S02-4).
 # Se exige una version corregida.
 pillow>=12.2.0
+
+# --- Dashboard (dashboard/app.py) ---
+streamlit==1.58.0
+plotly==6.8.0
