@@ -96,7 +96,19 @@ Evaluación sobre el set de test (año 2024, datos **no vistos durante entrenami
 
 > **Nota de transparencia (corrección de metodología).** Una versión previa reportaba RMSE 9.48 / MAE 4.23, pero esa cifra se obtuvo con Optuna optimizando los hiperparámetros sobre el propio conjunto de **test** (*data leakage* de selección). Corregido el protocolo (selección por validación, test medido una sola vez con `TPESampler(seed=42)` para reproducibilidad), el número honesto es **RMSE 10.14 / MAE 4.31**. Es ligeramente peor, pero es el desempeño real esperable sobre IES no vistas.
 
-**Interpretación para el negocio**: en promedio, el modelo se equivoca **4.31 puntos porcentuales** al predecir la tasa de deserción de una IES. Como referencia, un baseline trivial de **persistencia** (predecir que la tasa se mantiene igual a la del último semestre) obtiene RMSE 10.07 / MAE 4.42 sobre el mismo test: **el modelo todavía no supera de forma clara a ese baseline**. Por eso su valor debe sustentarse en la **priorización/ranking** de IES en riesgo (no solo en el error promedio) y en corregir el horizonte de pronóstico recursivo — líneas de trabajo en curso.
+**Interpretación para el negocio**: en promedio, el modelo se equivoca **4.31 puntos porcentuales** al predecir la tasa de deserción de una IES. Como referencia, un baseline trivial de **persistencia** (predecir que la tasa se mantiene igual a la del último semestre) obtiene RMSE 10.07 / MAE 4.42 sobre el mismo test agregado. Para una comparación justa conviene mirar el desempeño **por horizonte** (abajo).
+
+### Evaluación honesta por horizonte (forecast recursivo)
+
+El producto promete un pronóstico a un año emitido en un único corte (fin de 2023-2). Bajo ese uso, al predecir 2024-2 **no se conoce** la tasa real de 2024-1: se usa la *predicción* de 2024-1 como `lag1` (encadenamiento recursivo). Reportar la métrica por horizonte y compararla contra la persistencia equivalente es lo metodológicamente correcto:
+
+| Horizonte | Modelo (RMSE / MAE) | Persistencia (RMSE / MAE) |
+|-----------|---------------------|---------------------------|
+| **t+1** (2024-1) | **11.16 / 4.74** | 11.48 / 4.97 |
+| **t+2** (2024-2, recursivo) | **10.49 / 4.72** | 11.19 / 4.72 |
+| t+2 (2024-2, con `lag1` real — *protocolo anterior, optimista*) | 8.99 / 3.89 | — |
+
+Dos conclusiones: (1) **el modelo supera a la persistencia en ambos horizontes** cuando se le mide de forma justa (≈0.3 RMSE en t+1, ≈0.7 en t+2); (2) usar la tasa **real** de 2024-1 (en vez de la predicha) hacía que t+2 pareciera mucho mejor de lo que honestamente es (RMSE 8.99 vs 10.49) — ese era el *leakage temporal* ahora corregido con la evaluación recursiva.
 
 ---
 

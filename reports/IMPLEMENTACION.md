@@ -69,4 +69,37 @@ Entorno: xgboost 3.3.0 · optuna 4.9.0 · sklearn 1.8.0. Ejecución EXIT=0; outp
 
 **README:** tabla de resultados actualizada a 10.14 / 4.31 con nota de transparencia explicando la corrección. El texto L78/L89 ahora coincide con el código (Optuna optimiza sobre validación; test no usado en optimización).
 
-**Commit:** `fix(model): Optuna optimiza sobre validacion, no sobre test (elimina data leakage C1)`
+**Commit:** `fix(model): Optuna optimiza sobre validacion, no sobre test (elimina data leakage C1)` (`f9a29c9`)
+
+---
+
+## PR-2 · `feat/forecast-recursivo-t1-t2` — Evaluación recursiva honesta (C2, D1)
+
+**Objetivo:** implementar el encadenamiento t+1→t+2 que promete el README y reportar métricas por horizonte; eliminar el import muerto `MultiOutputRegressor`.
+
+**Hallazgos atacados:** C2 (no había forecast recursivo; 2024-2 usaba la tasa real de 2024-1), D1 (`MultiOutputRegressor` importado y nunca usado).
+
+**Cambios (`entrenamiento_csv/model.ipynb`):**
+1. Celda `eaa35542` (imports): eliminado `from sklearn.multioutput import MultiOutputRegressor` (código muerto).
+2. Nuevas celdas (markdown `73527519` + código `a6f0c004`) tras el modelo final: reconstruyen el dataset con `IES` desde `../df_forecast_raw.csv` (réplica exacta de la ventana deslizante de `dataset.ipynb`), y evalúan:
+   - **h=1 (2024-1):** predicción directa con lags reales (≤ 2023-2).
+   - **h=2 (2024-2) recursivo:** `lag1` = predicción de 2024-1 (mapeada por IES), no el valor real.
+   - **h=2 con `lag1` real:** protocolo anterior, para cuantificar el leakage.
+   - Persistencia por horizonte como referencia.
+   - `assert len(t1)+len(t2)==len(x_test)` para validar la reconstrucción (pasó: 265+264=529).
+
+**Verificación (ejecución real, EXIT=0):**
+
+| Horizonte | Modelo RMSE / MAE | Persistencia RMSE / MAE |
+|-----------|-------------------|--------------------------|
+| t+1 (2024-1) | **11.16 / 4.74** | 11.48 / 4.97 |
+| t+2 (2024-2, recursivo honesto) | **10.49 / 4.72** | 11.19 / 4.72 |
+| t+2 (2024-2, con lag1 REAL — leakage anterior) | 8.99 / 3.89 | — |
+
+**Conclusiones:**
+- **C2 cuantificado:** el lag real de 2024-1 inflaba t+2 de RMSE 10.49 (honesto) a 8.99 (≈1.5 RMSE de optimismo indebido).
+- **Buena noticia:** medido de forma justa por horizonte, **el modelo SÍ supera a la persistencia en ambos** (~0.3 RMSE en t+1, ~0.7 en t+2). El "modelo no aporta" del PR-1 era artefacto del agregado con leakage temporal; la evaluación honesta por horizonte es más favorable.
+
+**README:** añadida subsección "Evaluación honesta por horizonte (forecast recursivo)" con la tabla. La afirmación del README sobre enfoque recursivo (L76) ahora SÍ está implementada.
+
+**Commit:** `feat(model): evaluacion recursiva honesta t+1->t+2 por horizonte (corrige C2); elimina import muerto (D1)`
