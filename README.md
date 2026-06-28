@@ -86,15 +86,17 @@ El pipeline se divide en tres etapas:
 
 ## Resultados
 
-Evaluación sobre el set de test (año 2024, datos no vistos durante entrenamiento ni optimización):
+Evaluación sobre el set de test (año 2024, datos **no vistos durante entrenamiento ni optimización**). Los hiperparámetros se seleccionan con Optuna **sobre el set de validación** (2023-2) y el test se mide **una sola vez** con el modelo ya congelado:
 
-| Métrica | Valor |
-|---------|-------|
-| RMSE    | 9.48  |
-| MAE     | 4.23  |
-| Ratio RMSE/MAE | 2.24 |
+| Métrica | Valor (test 2024) |
+|---------|-------------------|
+| RMSE    | 10.14 |
+| MAE     | 4.31  |
+| Ratio RMSE/MAE | 2.35 |
 
-**Interpretación para el negocio**: en promedio, el modelo se equivoca **4.23 puntos porcentuales** al predecir la tasa de deserción de una IES. Dado que la tasa promedio nacional ronda el 10–15%, esto representa un margen de error del 28–40% relativo — suficiente para priorizar intervenciones y planificar recursos, sin pretender exactitud clínica.
+> **Nota de transparencia (corrección de metodología).** Una versión previa reportaba RMSE 9.48 / MAE 4.23, pero esa cifra se obtuvo con Optuna optimizando los hiperparámetros sobre el propio conjunto de **test** (*data leakage* de selección). Corregido el protocolo (selección por validación, test medido una sola vez con `TPESampler(seed=42)` para reproducibilidad), el número honesto es **RMSE 10.14 / MAE 4.31**. Es ligeramente peor, pero es el desempeño real esperable sobre IES no vistas.
+
+**Interpretación para el negocio**: en promedio, el modelo se equivoca **4.31 puntos porcentuales** al predecir la tasa de deserción de una IES. Como referencia, un baseline trivial de **persistencia** (predecir que la tasa se mantiene igual a la del último semestre) obtiene RMSE 10.07 / MAE 4.42 sobre el mismo test: **el modelo todavía no supera de forma clara a ese baseline**. Por eso su valor debe sustentarse en la **priorización/ranking** de IES en riesgo (no solo en el error promedio) y en corregir el horizonte de pronóstico recursivo — líneas de trabajo en curso.
 
 ---
 
