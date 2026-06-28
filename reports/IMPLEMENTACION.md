@@ -205,6 +205,22 @@ Mejora del modelo sobre persistencia (TEST agregado): **−0.07 RMSE / +0.10 MAE
 
 **Commit:** `feat(dashboard): dashboard Streamlit de alerta temprana de desercion por IES (WEB-9)`
 
+## Mejoras notebook · SHAP + conformal + backtesting (WEB-6, WEB-7, ML-7)
+
+**Cambios (`entrenamiento_csv/model.ipynb`):** 3 celdas nuevas al final.
+1. **SHAP (TreeSHAP)** vía `booster.predict(pred_contribs=True)`: importancia global por media |SHAP|.
+2. **Conformal split (90%)**: banda calibrada con residuos de validación + cobertura empírica en test.
+3. **Backtesting rolling-origin**: re-entrena con `best_params` en 4 cortes (2022-1…2023-2) vs persistencia.
+
+**Verificación (EXIT=0):**
+- SHAP: `lag1` domina (|SHAP| 3.05); luego lag2/lag4/MUNICIPIO/lag3/CARACTER; ORIGEN ≈ 0.
+- Conformal 90%: banda ±5.2 pp; cobertura empírica 81% en 2024 (sobreconfiado en el año difícil).
+- Backtesting: modelo **7.52 ± 1.60** vs persistencia **8.33 ± 1.94** → el modelo gana en 3 de 4 cortes; lectura robusta más favorable que el único corte 2024.
+
+**README:** subsección "Interpretabilidad, incertidumbre y robustez".
+
+**Commit:** `feat(model): SHAP + intervalos conformal + backtesting rolling-origin (WEB-6, WEB-7, ML-7)`
+
 ---
 
 ## Resumen de commits (rama base `chore/auditoria-inicial`, ramas apiladas)

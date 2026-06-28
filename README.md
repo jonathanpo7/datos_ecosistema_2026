@@ -139,6 +139,12 @@ El caso de uso real es **priorizar IES en riesgo**, no solo minimizar el error p
 
 El modelo es **muy confiable para universidades** (error ≈ 1.7 pp) y **poco confiable para instituciones técnicas profesionales** (error ≈ 21 pp): para esas IES las predicciones deben tomarse con cautela. Esta transparencia por segmento es clave para un uso responsable en política pública.
 
+### Interpretabilidad, incertidumbre y robustez
+
+- **Drivers (SHAP / TreeSHAP):** la última tasa observada (`lag1`) domina la predicción (media |SHAP| ≈ 3.05 pp), seguida de los lags previos, el municipio y el carácter institucional; el origen apenas aporta. El riesgo se explica sobre todo por la **trayectoria reciente** de la propia IES.
+- **Incertidumbre (conformal split, 90%):** banda de ±5.2 pp; cobertura empírica del **81%** en 2024 (objetivo 90%) → el modelo es algo **sobreconfiado** en 2024 (un año más difícil que la validación), un dato honesto que conviene comunicar al usuario.
+- **Backtesting rolling-origin (cortes 2022-1 … 2023-2):** modelo RMSE **7.52 ± 1.60** vs persistencia **8.33 ± 1.94** → en promedio el modelo **sí supera** a la persistencia (gana en 3 de 4 cortes), con varianza entre semestres. La evaluación multi-ventana da una lectura más robusta y favorable que el único corte 2024.
+
 ---
 
 ## Estructura del proyecto
