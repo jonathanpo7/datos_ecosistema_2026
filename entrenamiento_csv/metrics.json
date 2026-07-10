@@ -1,0 +1,35 @@
+{
+  "protocolo": "Optuna sobre validacion; test medido una sola vez; semilla=42",
+  "validacion": {
+    "rmse": 4.3578,
+    "mae": 2.8075
+  },
+  "test_agregado": {
+    "rmse": 10.1375,
+    "mae": 4.3141
+  },
+  "por_horizonte": {
+    "h1_2024_1": {
+      "modelo_rmse": 11.1616,
+      "modelo_mae": 4.7391,
+      "persistencia_rmse": 11.4815,
+      "persistencia_mae": 4.974
+    },
+    "h2_2024_2_recursivo": {
+      "modelo_rmse": 10.4869,
+      "modelo_mae": 4.7157,
+      "persistencia_rmse": 11.1939,
+      "persistencia_mae": 4.716
+    }
+  },
+  "baselines_test_agregado": {
+    "persistencia": {
+      "rmse": 10.0713,
+      "mae": 4.4182
+    },
+    "media": {
+      "rmse": 13.5134,
+      "mae": 7.5858
+    }
+  }
+}
