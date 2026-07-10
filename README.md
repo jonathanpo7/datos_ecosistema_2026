@@ -1,6 +1,6 @@
 # Forecast de Deserción en Instituciones de Educación Superior — Colombia
 
-Modelo de machine learning que predice la tasa de deserción estudiantil por IES para los dos semestres siguientes (1 año adelante), usando series históricas del SNIES.
+Modelo de machine learning que predice la tasa de deserción estudiantil por IES para el **semestre siguiente**, usando series históricas del SNIES.
 
 > 🧭 **¿Eres del equipo? Empieza por [`ESTADO_DEL_PROYECTO.md`](ESTADO_DEL_PROYECTO.md)** — qué se hizo, qué falta y qué sigue. Las correcciones y el dashboard están en el [PR #1](https://github.com/jonathanpo7/datos_ecosistema_2026/pull/1).
 
@@ -12,9 +12,9 @@ Modelo de machine learning que predice la tasa de deserción estudiantil por IES
 flowchart TD
     A[SNIES — Datos MEN] --> B[Preprocesamiento\n277 IES con series\ncompletas ≥ 10 años]
     B --> C[Dataset Sliding Window\nHistorial 4 períodos → target]
-    C --> D[Modelo XGBoost\nForecast 1 año ahead\n2 semestres]
+    C --> D[Modelo XGBoost\nForecast 1 semestre ahead]
 
-    D --> E{Clasificación\npor comportamiento}
+    D --> E[Ranking de IES\npor tasa predicha]
 
     E --> F[IES en riesgo\nTasa alta o en aumento]
     E --> G[IES referente\nTasa baja o en descenso]
@@ -40,19 +40,19 @@ Históricamente, las entidades de gobierno han respondido a este fenómeno de fo
 
 Las secretarías de educación y el Ministerio de Educación Nacional operan dentro de ciclos de gobierno con ventanas de planificación anuales. Para que una secretaría pueda diseñar e implementar una intervención efectiva en una IES —ya sea acompañamiento, asignación de recursos o alertas tempranas— necesita anticipar el comportamiento con al menos un año de antelación.
 
-Un modelo que prediga la tasa de deserción para los próximos dos semestres permite:
+Un modelo que prediga la tasa de deserción para el próximo semestre permite:
 
 - **Pasar de reactivo a activo**: identificar qué IES están en riesgo antes de que el problema escale
 - **Priorizar intervenciones**: enfocar recursos en las instituciones con mayor probabilidad de deterioro
-- **Planificar dentro del ciclo de gobierno**: las predicciones a 1 año se alinean con los ciclos de presupuesto y política educativa
+- **Planificar dentro del ciclo de gobierno**: la predicción a un semestre se alinea con los ciclos de presupuesto y política educativa
 
-Se descartó un horizonte de 2 años porque la incertidumbre acumulada reduce significativamente la confiabilidad de las predicciones, y el valor de negocio se concentra en el año inmediato. Adicionalmente, los datos del SNIES presentan limitaciones de consistencia en el reporte —tasas con artefactos, cobertura variable entre IES y ausencia de variables de contexto institucional— que hacen poco confiable extender el horizonte más allá de un año. La proyección a 1 año es la propuesta más honesta dado el nivel de información disponible.
+El horizonte definido es **un semestre adelante** (`t+1`). Si se requiere proyección al segundo semestre, el modelo puede encadenarse de forma recursiva — pero esa extensión acumula la incertidumbre del primer semestre y debe comunicarse con transparencia, no con la misma confianza que `t+1`.
 
 ---
 
 ## Objetivo
 
-Predecir la **tasa de deserción por IES** para los semestres `t+1` y `t+2` (el año siguiente), a partir de su historial de al menos 10 años de datos consecutivos.
+Predecir la **tasa de deserción por IES** para el semestre `t+1` (el siguiente período), a partir de su historial de al menos 10 años de datos consecutivos, y construir un ranking de riesgo que permita priorizar intervenciones.
 
 ---
 
@@ -62,6 +62,7 @@ Predecir la **tasa de deserción por IES** para los semestres `t+1` y `t+2` (el 
 - **Cobertura**: 343 IES con datos históricos en el sistema
 - **IES aptas para forecast**: 277 instituciones seleccionadas con series consecutivas de **mínimo 20 períodos (10 años)** sin huecos internos
 - **Variable objetivo**: tasa de deserción = `(DESERTORES / MATRICULADOS) × 100`, acotada a [0, 100] para corregir artefactos de reporte del SNIES donde DESERTORES puede provenir de cohortes distintas a MATRICULADOS
+- **Calidad de datos en origen:** los datos crudos del SNIES contienen tasas anómalas (hasta 138 700%) por denominadores muy pequeños o inconsistencias de cohorte. Estos artefactos son un problema de la **fuente**, no de la manipulación. El clip [0, 100] se aplica en `dataset.ipynb` sobre el dataset completo **antes del split**, por lo que train, val y test están todos protegidos. El archivo `df_forecast_raw.csv` conserva los valores originales para trazabilidad.
 
 ---
 
@@ -75,14 +76,15 @@ El pipeline se divide en tres etapas:
 - Construcción del dataset de entrenamiento mediante **ventana deslizante**: cada fila representa una posición en la serie histórica con 4 períodos anteriores como entrada y el siguiente período como objetivo
 
 ### 2. Entrenamiento (`entrenamiento_csv/model.ipynb`)
-- **Modelo**: XGBoost Regressor con enfoque recursivo — un único modelo predice un paso adelante; para obtener la predicción del segundo semestre se encadena la salida del primero como entrada
+- **Modelo**: XGBoost Regressor — predice un semestre adelante (`t+1`) a partir de los 4 períodos anteriores
 - **Split temporal**: Train ≤ 2023-1 | Validación = 2023-2 | Test = 2024
 - **Optimización**: Optuna con 100 ensayos buscando los mejores hiperparámetros sobre el set de validación
 - **Features**: últimos 4 períodos de tasa (`lag1`–`lag4`), semestre, carácter institucional, origen, departamento y municipio
 
 ### 3. Evaluación
-- Métricas principales: **MAE** (error promedio en puntos porcentuales) y **RMSE** (penaliza errores grandes)
-- La relación RMSE/MAE indica consistencia del modelo: valores cercanos a 2 son saludables; valores mayores a 3 señalan casos problemáticos que requieren revisión
+- **MAE**: error promedio en puntos porcentuales — el número más interpretable para comunicar a tomadores de decisión
+- **RMSE**: penaliza errores grandes — útil para detectar IES donde el modelo falla mucho (cola pesada)
+- **Ranking (Spearman)**: mide qué tan bien el modelo ordena las IES por nivel de riesgo, que es el uso real en política pública
 
 ---
 
@@ -126,9 +128,8 @@ En **validación** el modelo supera ampliamente a la persistencia; en el **test 
 
 El caso de uso real es **priorizar IES en riesgo**, no solo minimizar el error promedio. Evaluado sobre 2024-1:
 
-- **Ranking (Spearman predicho vs real): 0.872** — el modelo ordena bien las IES por nivel de deserción.
-- **Precision@20 = 0.65** · **Precision@50 = 0.74** — de las 50 IES que el modelo señala como de mayor deserción, 37 lo son de verdad.
-- **Clasificación "en riesgo" (tasa ≥ p75 = 16.3%): Precision 0.94 / Recall 0.43 / F1 0.59** — cuando el modelo marca una IES como de alto riesgo, acierta el 94% de las veces.
+- **Ranking (Spearman predicho vs real): 0.872** — el modelo ordena bien las IES por nivel de deserción. Una secretaría puede tomar la lista ordenada por tasa predicha y priorizar intervenciones de arriba hacia abajo con alta confianza en el orden.
+- **Precision@50 = 0.74** — de las 50 IES que el modelo señala como de mayor deserción, 37 realmente lo son.
 
 **Dónde confiar (MAE por tipo de IES, 2024-1):**
 
@@ -189,9 +190,9 @@ pip install -r requirements.txt
 ## Próximos pasos
 
 - Feature engineering: tendencia (`lag1 - lag4`), momentum (`lag1 - lag2`), volatilidad de la serie
-- Dashboard interactivo para visualización de predicciones por IES y departamento
-- Incorporación de variables externas: tasas de desempleo regional, indicadores socioeconómicos
-- Métricas de priorización/ranking (Precision@K) e interpretabilidad (SHAP); backtesting multi-ventana
+- Incorporación de variables externas: tasas de desempleo regional, indicadores socioeconómicos ICETEX
+- Mejorar cobertura de instituciones técnicas y tecnológicas (datos SNIES más consistentes en ese segmento)
+- Mapa coroplético por departamento en el dashboard
 
 ---
 
